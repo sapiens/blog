@@ -11,7 +11,7 @@ description: Maintainable code is a business advantage
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
 avatar: 
 
-paginate: 1
+paginate: 5
 paginate_path: "/posts/:num"
 
 #
@@ -37,7 +37,7 @@ footer-links:
 
 # Enter your Disqus shortname (not your username) to enable commenting on posts
 # You can find your shortname on the Settings page of your Disqus account
-disqus:
+disqus: sapiensworks
 
 # Enter your Google Analytics web tracking code (e.g. UA-2110908-2) to activate tracking
 google_analytics:
