@@ -54,7 +54,7 @@
   {% else %}
   
     {% for tag in tags_list %} 
-      <li> hi
+      <li>{{ tag }}
         <a href="{{ site.baseurl }}/topics/#{{ tag[0] | slugify }}">{{ tag[0] | capitalize }} <span>({{ tag[1].size }})</span></a></li>
     {% endfor %}
   {% endif %}
