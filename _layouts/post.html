@@ -8,14 +8,15 @@ layout: default
   <div class="entry">
     {{ content }}
   </div>
-
-  <div class="date">
-    Written on {{ page.date | date: "%B %e, %Y" }}
-    
+<footer>
+  <span class="date">
+    Written on {{ page.date | date: "%e %B %Y" }}
+  </span>
     {% if page.category %}
-    | Topic: <a href="{{site.baseurl | prepend: site.url}}/topics/#{{ page.category | slugify}}">{{ page.category }}</a> 
+      |   Topic: <a href="{{site.baseurl | prepend: site.url}}/topics/#{{ page.category | slugify}}">{{ page.category }}</a> 
     {% endif %}
-  </div>
+</footer>
+  
 
   {% include disqus.html %}
 </article>
