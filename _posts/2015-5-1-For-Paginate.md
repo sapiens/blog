@@ -27,7 +27,7 @@ The good news about writing a trivial app is that you don't need many things. On
 
  Now, the most common antipattern when using a Container is something like this
 
- Now, the most common antipattern when using a Container is something like this
+  
 
 ```csharp
 public class MyClass
@@ -37,18 +37,26 @@ public class MyClass
       var dep1=Container.Resolve<Dependency>();
    }
 }
+
 ```
+  This code invalidates the use of a Container because:
 
   
   2. **MyClass** is tightly coupled to the container 
   4. None of its dependencies are actualy injected  The proper code should look like this
 
- 
+  
+
+```csharp
+public class MyClass
+{
+   public MyClass(IDependency dep)
+   {
+     //assign dep to field
+   }}
+
 ```
-public class MyClass { public MyClass(IDependency dep) { //assign dep to field }  
-}
-```
- **MyClass** doesn't know that a Container is used, it knows only about an abstract dependency. It's the usually the job of a framework to call the Container for an instance of **MyClass**. In your code you should try to refer to the Container as little as possible so that very little code should actually depend on the Container itself.
+  **MyClass** doesn't know that a Container is used, it knows only about an abstract dependency. It's the usually the job of a framework to call the Container for an instance of **MyClass**. In your code you should try to refer to the Container as little as possible so that very little code should actually depend on the Container itself.
 
  Good code knows only about its immediate dependencies and those should be abstractions. When an object requires an outside object which is not injected as a dependency, you have a tight coupling problem. So use only the injected dependencies and let the Container do the wiring.
 
