@@ -3,7 +3,7 @@ layout: default
 ---
 
 <div class="posts">
-  {% for post in site.posts %}
+  {% for post in paginator.posts %}
     <article class="post">
 
       <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
@@ -16,3 +16,7 @@ layout: default
     </article>
   {% endfor %}
 </div>
+<ul>
+  <li><a href="{{ paginator.previous_page_path }}">Older</a></li>
+  <li><a href="{{ paginator.next_page_path }}">Older</a></li>
+</ul>
