@@ -1,6 +1,6 @@
 ---
 title: aaaa
-category: 'Other category test'
+category: Other
 
 ---
 
