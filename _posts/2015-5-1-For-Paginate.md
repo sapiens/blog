@@ -29,7 +29,12 @@ The good news about writing a trivial app is that you don't need many things. On
 
  
 ```
-public class MyClass { public MyClass() { var dep1=Container.Resolve<Dependency>(); } }
+public class MyClass
+{ 
+      public MyClass() 
+      { var dep1=Container.Resolve<Dependency>();
+      }
+ }
 ```
  This code invalidates the use of a Container because:
 
