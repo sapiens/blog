@@ -2,7 +2,7 @@
 layout: default
 title: aaaa
 
-category: Other
+category: Other Stuff
 
 ---
 
