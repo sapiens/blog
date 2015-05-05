@@ -12,7 +12,7 @@ description: Maintainable code is a business advantage
 avatar: 
 
 paginate: 1
-paginate_path: "/posts/:num"
+paginate_path: "/blog/posts/:num"
 
 #
 # Flags below are optional
