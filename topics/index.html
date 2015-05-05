@@ -6,14 +6,8 @@ title: Topics
 <h1>{{ page.title }}</h1>
 <p>&nbsp;</p>
 
-{% capture categories %}
-  {% for tag in site.categories %}
-    {{ tag[0] }}
-  {% endfor %}
-{% endcapture %}
-{% assign sortedtags = categories | split:' ' | sort %}
 
-{% for tag in sortedtags %}
+{% for tag in site.categories %}
   <h3 id="{{ tag | slugify }}">{{ tag }}</h3>
   <ul>
   {% for post in site.categories[tag] %}
