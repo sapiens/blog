@@ -8,10 +8,10 @@ title: Topics
 
 {% capture categories %}
   {% for tag in site.categories %}
-    {{ tag[0] }},
+    {{ tag[0] }}
   {% endfor %}
 {% endcapture %}
-{% assign sortedtags = categories | split:',' | sort %}
+{% assign sortedtags = categories | split:' ' | sort %}
 
 {% for tag in sortedtags %}
   <h3 id="{{ tag | slugify }}">{{ tag }}</h3>
