@@ -27,18 +27,15 @@ The good news about writing a trivial app is that you don't need many things. On
 
  Now, the most common antipattern when using a Container is something like this
 
- 
-Now, the most common antipattern when using a Container is something like this
+ Now, the most common antipattern when using a Container is something like this
 
-  `public class MyClass
+  ```public class MyClass
 {
    public MyClass()
    {
       var dep1=Container.Resolve<Dependency>();
    }
-}`  This code invalidates the use of a Container because:
-
- This code invalidates the use of a Container because:
+}```
 
   
   2. **MyClass** is tightly coupled to the container 
