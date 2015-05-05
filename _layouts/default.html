@@ -48,14 +48,13 @@
   {% if tags_list.first[0] == null %}
     {% for tag in tags_list %} 
   
-      <li>
-   
-        <a href="{{ site.baseurl }}/topics/#{{ tag | slugify }}">{{ tag | capitalize }} <span> ({{ site.tags[tag].size }})</span></a></li>
+      <li> nohi
+           <a href="{{ site.baseurl }}/topics/#{{ tag | slugify }}">{{ tag | capitalize }} <span> ({{ site.tags[tag].size }})</span></a></li>
     {% endfor %}
   {% else %}
+  
     {% for tag in tags_list %} 
-      <li>
-               {{ tag }} |   {{ tag|slugify }} 
+      <li> hi
         <a href="{{ site.baseurl }}/topics/#{{ tag[0] | slugify }}">{{ tag[0] | capitalize }} <span>({{ tag[1].size }})</span></a></li>
     {% endfor %}
   {% endif %}
