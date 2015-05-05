@@ -13,7 +13,7 @@ layout: default
     Written on {{ page.date | date: "%B %e, %Y" }}
     
     {% if page.category %}
-    | <a href=""></a> 
+    | Topic: <a href="{{site.baseurl | prepend: site.url}}/topics/#{{ page.category | slugify}}">{{ page.category }}</a> 
     {% endif %}
   </div>
 
