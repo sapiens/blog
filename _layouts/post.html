@@ -10,7 +10,7 @@ layout: default
   </div>
 <footer>
   <span class="date">
-    Written on {{ page.date | date: "%e %B %Y" }}
+    Written by <i>Mike</i> on {{ page.date | date: "%e %B %Y" }}
   </span>
     {% if page.category %}
       |   Topic: <a href="{{site.baseurl | prepend: site.url}}/topics/#{{ page.category | slugify}}">{{ page.category }}</a> 
