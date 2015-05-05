@@ -14,7 +14,7 @@ title: Topics
 {% assign sortedtags = categories | split:',' | sort %}
 
 {% for tag in sortedtags %}
-  <h3 id="{{ tag }}">{{ tag }}</h3>
+  <h3 id="{{ tag | slugify }}">{{ tag }}</h3>
   <ul>
   {% for post in site.categories[tag] %}
     <li>
