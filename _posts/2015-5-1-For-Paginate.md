@@ -1,10 +1,9 @@
 ---
 layout: post
-title: aaaa
-
-category: Other Stuff
-
+title: Benefits Of Using A DI Container
+category: Best Practices
 ---
+
 The good news about writing a trivial app is that you don't need many things. Only some basic coding skills and a 'get it done' attitude. Design patterns, SOLID code etc are not required. It's code and forget. Easy and practical.
 
  However, when dealing even with moderately complex apps things are different: there is advanced functionality required and changes are the norm. Suddenly, the way the app is designed and how the code is written matters. At that point, we care a lot about maintainability, which implies decoupled code. And decoupled code means that most objects will take one or more abstract dependencies.
@@ -61,4 +60,5 @@ public class MyClass
  Good code knows only about its immediate dependencies and those should be abstractions. When an object requires an outside object which is not injected as a dependency, you have a tight coupling problem. So use only the injected dependencies and let the Container do the wiring.
 
  P.S: Some Containers feature Interceptions which are used to implement Aspect Oriented Programming (AOP). In my opinion, this is an optional feature that isn't directly related to the main job a DI Container does. An AOP dedicated framework is a better choice.
+
 
