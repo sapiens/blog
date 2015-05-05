@@ -2,7 +2,7 @@
 title: aaaa
 categories:
 - Other category
-- A simple category
+- A sample category
 
 ---
 
