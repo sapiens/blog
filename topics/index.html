@@ -8,4 +8,9 @@ title: Topics
 
 {{ site.categories }}
 
+{% for tag in site.categories %}
+  <h3 id="{{ tag | slugify }}">{{ tag }}</h3>
+
+{% endfor %}
+
 
