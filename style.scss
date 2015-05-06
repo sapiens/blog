@@ -63,9 +63,8 @@ h1 {
  margin-bottom:1rem;	
 }
 
-h2 {
-  
-   background-color: $topicBg;
+aside h2 {
+     background-color: $topicBg;
    border-bottom: 1px solid #09359b;
     border-radius: 0;
     border-top: 1px solid #09359b;
@@ -73,6 +72,7 @@ h2 {
     font-size: 1.2rem;
     letter-spacing: 1px;
     margin: 0 0 5px;
+    margin-top:1rem;
     padding: 10px 5px 5px 10px;
 }
 
@@ -251,7 +251,7 @@ img {
     font-style: italic;
   }
 .entry{
-    color: #515151;
+    color: #434356;
     font-family: $georgia;
     font-size: 1.1rem;
     line-height: 145%;
