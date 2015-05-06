@@ -7,7 +7,7 @@ title: Topics
   <h2 id="{{ tag[0] | slugify }}">{{ tag[0] | capitalize }}</h2>
   <ul class="post-list">
     {% assign pages_list = tag[1] %}  
-    {% for post in pages_list %}
+    {% for post in pages_list | sort: 'date' %}
       {% if post.title != null %}
       {% if group == null or group == post.group %}
       <li><a href="{{ post.url | prepend: site.baseurl |prepend: site.url }}">{{ post.title }}
