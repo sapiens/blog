@@ -1,6 +1,6 @@
 ---
 layout: post
-title: DDD: The Bounded Context Explained
+title: DDD - The Bounded Context Explained
 category: Domain Driven Design
 ---
 
