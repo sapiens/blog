@@ -1,0 +1,21 @@
+---
+layout: post
+title: Bending The Principles: Separation of Concerns
+category: Best Practices
+---
+
+After I wrote that the Domain should be kept business only and free from everything that is not business, it's to time to contradict myself (a bit).It's in our best interest to respect SoC (Separation of Concerns principle) but sometimes you might want to use Event Sourcing. For those unfamiliar with EventSourcing (ES), the entity's state changes by applying events and the state itself is persisted as a stream of events. It's ok the entity generates the events, but the issue is the entity must have at least 2 public methods (GetGeneratedEvents and MarkEventsHandled - the names may vary) which are required by ES but clearly NOT a part of the domain concepts.
+
+ This means we have to 'corrupt' our model with concerns that have nothing to do with the Domain. We're violating SoC here so what can we do about it? I mean we have a valid reason (that behaviour really is required to implement ES) but it's still a breach. We don't want to be dogmatic purists, we like to think ourselves as pragmatists so maybe in this situation we can allow an exception. After all, we don't have hard rules in software devel, we have guidelines,best practices and principles. And this is clearly an exceptional case.
+
+ Well, the ORM requiring virtual properties or making a property public (getter encapsulating field) is an exception too. Maybe that one property the UI needs it can be also an exception, you can see the trend. It's very easy to rationalize every exception and we end up with code that breaks SoC (so why are we structuring the app in layers?). Yes, everything can be abused and we simply can't be rigid and say "no exception", rigidity won't lead to a good code base. We need to be flexible without turning promiscuous. Bending the principles when you're fully aware of the benefits and drawbacks is ok, using often pragmatism as an excuse, is not.
+
+ Personally, I'm thinking more than twice when I'm in this situation. I want to be flexible but also I like clean, clearly defined code and putting technical concerns into a domain object is a code smell to me. But any object (in C# /.Net) already has methods like _ToString()_ or _GetType()_ which have nothing to do with the domain and I haven't heard anyone yet complaining about them breaking SoC. They are framework features and we simply ignore them. Maybe we can think of behaviour required by ES (or any other technique) as technique/architecture features as well?
+
+ We can, although it's still a smelly situation. I'm a firm advocate of being the master of your code that is, you need to 'own' the code, to know why did you write that, why have you used a specific pattern etc. Best practices are best if you understand the benefits and bending them means you're assuming the consequences. I think is better to try and see if that functionality isn't better fit in another layer. If it isn't, then we have to be flexible but also to ensure that everyone in the team understands WHY that decision has been made. And that an exception is not a 'go ahead' to do the same everytime you think it's easier to put more behaviour in an object.
+
+ I think discipline is paramount for a maintainable codebase. You need creativity and flexibility to come up with solutions and discipline to make sure the solutions are for the long term, not just duct-tape. And if it is duct tape, then you better know why it is so and what are the implications. Duct taping is sometimes so easy and because it does the work it's tempting to leave it like this and find other more important/fun staff to work on. But make no mistake, the duct tape solution will be a weak point and as karma has it, it will bite your ass when least expected, usually when you have more important bugs or functionality to take care of and time is in very short supply. But maybe it's an exception, where we have to bend again the principles...
+
+ In conclusion, disregarding best practices or good principles is a tricky business, one that can allow more flexibility when really needed but one that can also make your code a mess if misused. It's up to you to control the implications of crossing that fine line.
+
+
