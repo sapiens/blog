@@ -32,6 +32,10 @@ body {
 .nav > li > a{
 	font-size:$fontSize*.85;
 }
+li.icons{
+	padding-right:1rem;
+}
+
 .nav > li.icons >a {
 	display:inline;
 	padding:0;
