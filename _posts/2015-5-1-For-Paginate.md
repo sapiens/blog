@@ -11,7 +11,7 @@ The good news about writing a trivial app is that you don't need many things. On
 ## Header 2
  So we have objects which require dependencies. That's not a problem as it's easy to provide those dependencies manually. Unless those dependencies themselves require dependencies and so on. At that point, a manual solution becomes cumbersome. A better, automated solution is needed and here is where the DI Container comes into play.
 
- There is a saying among developers: "When learning about DI Container you don't understand why you really need it, but after you start using it properly, you wonder how you managed without one".
+> There is a saying among developers: "When learning about DI Container you don't understand why you really need it, but after you start using it properly, you wonder how you managed without one".
 
  The most obvious benefit of a DI Container is the automated wiring of all dependencies. 1 or 100 it doesn't matter, the Container knows how to provide them. It's almost magical. But the benefits don't stop here.
 
