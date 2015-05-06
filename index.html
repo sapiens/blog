@@ -11,8 +11,10 @@ layout: default
       <div class="entry">
         {{ post.content }}
       </div>
-
-      <a href="{{ site.baseurl }}{{ post.url }}#comments" class="read-more">Leave a comment</a>
+     <footer>
+      <a href="{{ site.baseurl }}{{ post.url }}#comments" class="read-more">Leave a comment</a> 
+     </footer>
+      
     </article>
   {% endfor %}
 </div>
