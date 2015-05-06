@@ -231,13 +231,6 @@ img {
 // .main
 //
 
-.post {
- background-color: #fdfdfd;
-    border: 1px solid #e5e2da;
-    border-radius: 5px;
-    margin-bottom: 20px;
-    padding: 25px 25px 10px;
-}
 
 .posts > .post:last-child {
   padding-bottom: 1em;
@@ -245,7 +238,13 @@ img {
 }
 $h1Font:$fontSize;
 .post {
- margin:1rem;
+  background-color: #fdfdfd;
+    border: 1px solid #e5e2da;
+    border-radius: 5px;
+    margin: 1rem;
+    margin-bottom: 1.25rem;
+    padding: 25px 25px 10px;
+    
   h1{
   	margin-top: 5px;
   	margin-bottom: 10px;
