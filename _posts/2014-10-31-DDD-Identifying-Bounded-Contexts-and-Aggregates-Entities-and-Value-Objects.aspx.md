@@ -4,7 +4,7 @@ title: DDD - Identifying Bounded Contexts and Aggregates, Entities and Value Obj
 category: Domain Driven Design
 ---
 
-Let me be clear about one thing concerning Domain objects: they aren't either Entities or Value Objects (VO). You can have simple objects in your Domain **and** you can have objects which have a business meaning. Only an object _recodesenting a Domain concept_ can be classified as an Entity (it has an id) or a VO (it encapsulates a simple or composite value).
+Let me be clear about one thing concerning Domain objects: they aren't either Entities or Value Objects (VO). You can have simple objects in your Domain **and** you can have objects which have a business meaning. Only an object _representing a Domain concept_ can be classified as an Entity (it has an id) or a VO (it encapsulates a simple or composite value).
 
  
 ## Bounded Context (BC)
