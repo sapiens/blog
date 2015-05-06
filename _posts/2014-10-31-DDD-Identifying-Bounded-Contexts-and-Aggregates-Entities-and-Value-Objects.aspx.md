@@ -1,6 +1,6 @@
 ---
 layout: post
-title: DDD: Identifying Bounded Contexts and Aggregates, Entities and Value Objects
+title: DDD - Identifying Bounded Contexts and Aggregates, Entities and Value Objects
 category: Domain Driven Design
 ---
 
