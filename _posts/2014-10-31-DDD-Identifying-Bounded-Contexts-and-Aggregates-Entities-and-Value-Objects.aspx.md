@@ -22,7 +22,7 @@ Let me be clear about one thing concerning Domain objects: they aren't either En
  
 ## Aggregates
 
- Identifying **Aggregates** is codetty hard. An aggregate is a group of objects that must be **consistent together**. But you can't just pick some objects and say: this is an aggregate. You start with modelling a Domain concept. For a non trivial concept, you end up with at least 1 entity and some VO. Regardless of how many entities, VOs or simple objects will be involved, the important things are that you'll have a 'primary' entity (named after the concept) and other objects that work together to implement the concept and its required behaviour. Those together form an **Aggregate** and the 'primary' entity is the **Aggregate Root** (AR).
+ Identifying **Aggregates** is pretty hard. An aggregate is a group of objects that must be **consistent together**. But you can't just pick some objects and say: this is an aggregate. You start with modelling a Domain concept. For a non trivial concept, you end up with at least 1 entity and some VO. Regardless of how many entities, VOs or simple objects will be involved, the important things are that you'll have a 'primary' entity (named after the concept) and other objects that work together to implement the concept and its required behaviour. Those together form an **Aggregate** and the 'primary' entity is the **Aggregate Root** (AR).
 
  The purpose of an AR is to _ensure the consistency of the aggregate_, that's why you should make changes to one only via the AR. If you change an object independently, the AR can't ensure the concept (the aggregate) is in valid state, it's like a car with a loose wheel.
 
