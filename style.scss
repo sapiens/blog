@@ -23,12 +23,16 @@ body {
   color: $darkGray;
 }
 
+.nav > li > a:focus, .nav > li > a:hover {
+    background-color:$topicBg;
+    text-decoration: none;
+}
 
 h1, h2, h3, h4, h5, h6 {
   font-family: $helveticaNeue;
   color: $gray;
   font-weight: bold;
-
+ background-color: $topicBg;
   line-height: 1.7;
   margin: 1em 0 15px;
   padding: 0;
