@@ -66,9 +66,12 @@ h1 {
  margin-bottom:1rem;	
 }
 
-h2{
+#topics{
+	padding:1rem;
+	h2{
 	background-color:$topicBg;
 	color:white;
+	}
 }
 
 .post-list{
