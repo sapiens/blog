@@ -233,17 +233,19 @@ img {
   padding-bottom: 1em;
   border-bottom: none;
 }
-
+$h1Font:$fontSize;
 .post {
  margin:1rem;
   h1{
-  	margin: 5px 0;
+  	margin-top: 5px;
+  	margin-bottom: 10px;
   	text-align:center;
   	font-size:$fontSize;
     	text-shadow: 1px 1px 1px #d0d0d0;
     	color:#333;
     
   }	
+  
   blockquote {
     margin: 1.8em .8em;
     border-left: 2px solid $gray;
@@ -258,6 +260,16 @@ img {
     font-size: 1.1rem;
     line-height: 145%;
     text-shadow: 1px 1px 1px #f0f0f0;
+    
+    h2{
+    	font-size:$h1Font*.85;
+    }
+    
+    h3{
+    	font-size:$h1Font*.75;
+    }
+    
+    
 }
   .comments {
     margin-top: 10px;
