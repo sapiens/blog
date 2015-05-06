@@ -8,12 +8,14 @@ The good news about writing a trivial app is that you don't need many things. On
 
  However, when dealing even with moderately complex apps things are different: there is advanced functionality required and changes are the norm. Suddenly, the way the app is designed and how the code is written matters. At that point, we care a lot about maintainability, which implies decoupled code. And decoupled code means that most objects will take one or more abstract dependencies.
 
+## Header 2
  So we have objects which require dependencies. That's not a problem as it's easy to provide those dependencies manually. Unless those dependencies themselves require dependencies and so on. At that point, a manual solution becomes cumbersome. A better, automated solution is needed and here is where the DI Container comes into play.
 
  There is a saying among developers: "When learning about DI Container you don't understand why you really need it, but after you start using it properly, you wonder how you managed without one".
 
  The most obvious benefit of a DI Container is the automated wiring of all dependencies. 1 or 100 it doesn't matter, the Container knows how to provide them. It's almost magical. But the benefits don't stop here.
 
+### Header 3
  Fact is, a Container is a factory which creates objects on demand. But it doesn't just creates them, it can also manage their lifetime which is an important feature. You might be aware that the Singleton pattern can be viewed as an anti pattern, mainly because of the static property which messes up testing and multi-threading scenarios. Oh, and breaking the Single Responsibility Principle, because the object gets the additional task to handle its own lifetime.
 
  Using a Container, you just tell it to treat an object as a singleton so the same instance will be used every time. The object itself doesn't know that it'll be used as a singleton so there's no need for private constructors or static properties. The object is relieved of the task to manage its own lifetime. You get less code and increased testability.
