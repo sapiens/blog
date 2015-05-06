@@ -60,8 +60,16 @@ h1 {
 }
 
 h2 {
-  font-size: 24px;
+  
    background-color: $topicBg;
+   border-bottom: 1px solid #09359b;
+    border-radius: 0;
+    border-top: 1px solid #09359b;
+    color: white;
+    font-size: 2em;
+    letter-spacing: 1px;
+    margin: 0 0 5px;
+    padding: 5px 5px 5px 10px;
 }
 
 h3 {
