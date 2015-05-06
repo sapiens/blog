@@ -1,6 +1,6 @@
 ---
 layout: post
-title: MvcPowerTools In Action: Multilingual Sites
+title: MvcPowerTools In Action - Multilingual Sites
 category: MvcPowerTools
 ---
 
@@ -11,7 +11,8 @@ Recently I've "developed" a simple brochure site which had the "catch" that it m
  I had a _Translator_ class,nothing fancy, just a dictionary and some helpers. Let's start with the urls. Using routing conventions I came up with this convention:
 
   
-```csharp
+
+```csharp
     public class MultilingualRouting:IBuildRoutes
     {
         private MultilingualTexts _translator;
@@ -39,7 +40,8 @@ Recently I've "developed" a simple brochure site which had the "catch" that it m
         }
     }
 
-```
+
+```
   The action name is the translation key. The translator returns a KeyValue array "language"=>"text". So, for each available language I generate a route having the localized (link) text converted as url without accents. Then the language is set for that route. All the routes contain the language associated with it.
 
  Next, the view engine conventions. The Views directory structure looks like this ![views directory](http://imgur.com/FlABmvO)
@@ -47,7 +49,8 @@ Recently I've "developed" a simple brochure site which had the "catch" that it m
  And the conventions
 
   
-```csharp
+
+```csharp
 public class MultiViewEngine:BaseViewConvention
 {
     public override bool Match(System.Web.Mvc.ControllerContext context, string viewName)
@@ -70,26 +73,30 @@ public class DefaultEngine : BaseViewConvention
     }
 }
 
-```
+
+```
   Not much to explain here. The current language is used as the directory where the view should be. If not, then it should be in the "~/Views" folder.
 
  Finally, the convention for our form labels
 
   
-```csharp
+
+```csharp
  conventions.Labels.Always.Modify((tag, info) =>
         {
             var translator = Translator.Instance.Data.GetTranslations(info.ViewContext.HttpContext.CurrentLanguage());
             return tag.Text(translator[info.Name]);
         });
 
-```
+
+```
   By default, the label is the field name (the name of the model property) but with this modifier, we'll use it as a translation key to get the localized text then assign it to the label. Other approach would be generate directly the label with the localized text, but I just care about changing the text I don't want to re-write the whole label tag generation regardless how trivial it is. It's much simpler to just change the text.
 
  As a thumb rule, it's better to modify than to build (generate) if the tag already has a default, simple builder. For example, if I want all my text areas to be 7 rows, I'd write something like this
 
   
-```csharp
+
+```csharp
  conventions.Editors
             .ForModelWithAttribute<DataTypeAttribute>()
             .Modify((tag, info) =>
@@ -100,18 +107,22 @@ public class DefaultEngine : BaseViewConvention
                 return tag;
             });
 
-```
+
+```
   What about generating links in html? I want to use this
 
   
-```csharp
+
+```csharp
 @(Html.LocalizedLinkTo(d => d.Contact()))
 
-```
+
+```
   And here's the helper code
 
   
-```csharp
+
+```csharp
  public static HtmlTag LocalizedLinkTo(this HtmlHelper html,Excodession<Action<DefaultController>> action,string text=null)
     {
         var name = action.GetMethodInfo().Name;
@@ -120,7 +131,8 @@ public class DefaultEngine : BaseViewConvention
         return html.LinkTo("default", text, action:name,model:new{lang=translations.Language});
     }
 
-```
+
+```
   I have only one controller in this app (remember, it's a brochure site) so I only need the action name to use it as a translation key, then the current language is passed as a route value.
 
  And this is how you can use [MvcPowerTools](https://github.com/sapiens/MvcPowerTools/wiki) to build multilingual sites.
