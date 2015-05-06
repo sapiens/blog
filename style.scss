@@ -67,11 +67,12 @@ h1 {
 }
 
 h2{
-	color:$topicBg;
+	background-color:$topicBg;
+	color:white;
 }
 
 .post-list{
-margin:15px 0;
+margin:0 2rem;
 	a{
 		font-size:$fontSize*.75;
 	}
@@ -272,6 +273,7 @@ $h1Font:$fontSize;
     h2{
     	font-size:$h1Font*.85;
     	color:$gray;
+    	background-color:transparent;
     }
     
     h3{
