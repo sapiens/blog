@@ -66,6 +66,13 @@ h1 {
  margin-bottom:1rem;	
 }
 
+h2{
+	color:$topicBg;
+}
+
+.post-list{
+	padding:15px 0;
+}
 aside h2 {
      background-color: $topicBg;
    border-bottom: 1px solid #09359b;
@@ -262,6 +269,7 @@ $h1Font:$fontSize;
     
     h2{
     	font-size:$h1Font*.85;
+    	color:$gray;
     }
     
     h3{
