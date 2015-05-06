@@ -2,7 +2,7 @@
 layout: post
 title: Benefits Of Using A DI Container
 category: Best Practices
-redirect_from: /blog/post/bla.aspx
+redirect_from: post/bla.aspx
 ---
 
 The good news about writing a trivial app is that you don't need many things. Only some basic coding skills and a 'get it done' attitude. Design patterns, SOLID code etc are not required. It's code and forget. Easy and practical.
