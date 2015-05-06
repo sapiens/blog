@@ -5,7 +5,7 @@
 // IMPORTS
 //
 
-@import "reset";
+//@import "reset";
 @import "variables";
 // Syntax highlighting @import is at the bottom of this file
 
@@ -23,12 +23,6 @@ body {
   color: $darkGray;
 }
 
-.container {
-  margin: 0 auto;
-  max-width: 740px;
-  padding: 0 10px;
-  width: 100%;
-}
 
 h1, h2, h3, h4, h5, h6 {
   font-family: $helveticaNeue;
@@ -130,38 +124,13 @@ img {
   background: $lightGray;
 }
 
-// Nicolas Gallagher's micro clearfix hack
-// http://nicolasgallagher.com/micro-clearfix-hack/
-.clearfix:before,
-.clearfix:after {
-    content: " ";
-    display: table;
-}
 
-.clearfix:after {
-    clear: both;
-}
 
 /*********************/
 /* LAYOUT / SECTIONS */
 /*********************/
 
-//
-// .masthead
-//
 
-.wrapper-masthead {
-  margin-bottom: 50px;
-}
-
-.masthead {
-  padding: 20px 0;
-  border-bottom: 1px solid $lightGray;
-
-  @include mobile {
-    text-align: center;
-  }
-}
 
 .site-avatar {
   float: left;
@@ -210,32 +179,6 @@ img {
   }
 }
 
-nav {
-  float: right;
-  margin-top: 23px; // @TODO: Vertically middle align
-  font-family: $helveticaNeue;
-  font-size: 18px;
-
-  @include mobile {
-    float: none;
-    margin-top: 9px;
-    display: block;
-    font-size: 16px;
-  }
-
-  a {
-    margin-left: 20px;
-    color: $darkGray;
-    text-align: right;
-    font-weight: 300;
-    letter-spacing: 1px;
-
-    @include mobile {
-      margin: 0 10px;
-      color: $blue;
-    }
-  }
-}
 
 //
 // .main
