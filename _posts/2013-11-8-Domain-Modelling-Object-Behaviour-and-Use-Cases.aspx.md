@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Domain Modelling: Object Behaviour and Use Cases
+title: DDD Modelling - Object Behaviour and Use Cases
 category: Domain Driven Design
 ---
 

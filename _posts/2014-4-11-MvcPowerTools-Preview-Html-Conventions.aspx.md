@@ -1,6 +1,6 @@
 ---
 layout: post
-title: MvcPowerTools Preview: Html Conventions
+title: MvcPowerTools Preview - Html Conventions
 category: MvcPowerTools
 ---
 

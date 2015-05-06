@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Battle of Micro-ORMs: Benchmarks and Observations
+title: Battle of Micro-ORMs, Benchmarks and Observations
 category: SqlFu
 ---
 

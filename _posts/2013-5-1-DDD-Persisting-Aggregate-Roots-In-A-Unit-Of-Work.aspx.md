@@ -1,6 +1,6 @@
 ---
 layout: post
-title: DDD: Persisting Aggregate Roots In A Unit Of Work
+title: DDD - Persisting Aggregate Roots In A Unit Of Work
 category: Domain Driven Design
 ---
 

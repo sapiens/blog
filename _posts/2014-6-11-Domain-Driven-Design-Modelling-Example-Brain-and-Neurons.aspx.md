@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Domain Driven Design Modelling Example: Brain and Neurons
+title:  Domain Driven Design Modelling Example - Brain and Neurons
 category: Domain Driven Design
 ---
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Message Driven Architecture Explained: Eventual Consistency and Saga
+title: Message Driven Architecture Explained - Eventual Consistency and Saga
 category: Architecture
 ---
 

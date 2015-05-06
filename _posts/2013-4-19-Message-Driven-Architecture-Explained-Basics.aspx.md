@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Message Driven Architecture Explained: Basics
+title: Message Driven Architecture Explained - Basics
 category: Architecture
 ---
 

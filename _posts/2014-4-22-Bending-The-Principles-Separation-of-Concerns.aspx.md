@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Bending The Principles: Separation of Concerns
+title: Bending The Principles - Separation of Concerns
 category: Best Practices
 ---
 

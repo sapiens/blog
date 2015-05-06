@@ -1,6 +1,6 @@
 ---
 layout: post
-title: MvcPowerTools Preview: View Engine Conventions
+title: MvcPowerTools Preview - View Engine Conventions
 category: MvcPowerTools
 ---
 

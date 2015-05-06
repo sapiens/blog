@@ -1,6 +1,6 @@
 ---
 layout: post
-title: MvcPowerTools Preview: Query and Command Controllers
+title: MvcPowerTools Preview - Query and Command Controllers
 category: MvcPowerTools
 ---
 

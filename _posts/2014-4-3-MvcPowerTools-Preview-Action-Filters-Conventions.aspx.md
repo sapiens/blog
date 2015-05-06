@@ -1,6 +1,6 @@
 ---
 layout: post
-title: MvcPowerTools Preview: Action Filters Conventions
+title: MvcPowerTools Preview - Action Filters Conventions
 category: MvcPowerTools
 ---
 

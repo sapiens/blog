@@ -1,6 +1,6 @@
 ---
 layout: post
-title: MvcPowerTools Preview: Routing Conventions
+title: MvcPowerTools Preview - Routing Conventions
 category: MvcPowerTools
 ---
 
