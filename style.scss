@@ -248,7 +248,13 @@ img {
     font-size: 22px;
     font-style: italic;
   }
-
+.entry{
+    color: #515151;
+    font-family: verdana,arial,sans-serif;
+    font-size: 0.85rem;
+    line-height: 145%;
+    text-shadow: 1px 1px 1px #f0f0f0;
+}
   .comments {
     margin-top: 10px;
   }
@@ -259,12 +265,7 @@ img {
   }
 }
 
-.wrapper-footer {
-  margin-top: 50px;
-  border-top: 1px solid #ddd;
-  border-bottom: 1px solid #ddd;
-  background-color: $lightGray;
-}
+
 
 footer {
   padding: 20px 0;
