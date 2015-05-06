@@ -30,10 +30,14 @@
             <p class="site-description hidden-xs">{{ site.description }}</p>
        
 
-          <nav class="navbar navbar-default">
-             {% include svg-icons.html %}
-            <a href="{{ site.baseurl }}/">Home</a>
-            <a href="{{ site.baseurl }}/about">About</a>
+          <nav>
+            {% include svg-icons.html %}
+            <ul class="nav nav-pills">
+              <li><a href="{{ site.baseurl }}/">Home</a></li>
+              <li><a href="{{ site.baseurl }}/about">About</a></li>
+            </ul>
+            
+            
           </nav>
           
         </header>
