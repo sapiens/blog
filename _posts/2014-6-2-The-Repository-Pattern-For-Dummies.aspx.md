@@ -1,7 +1,7 @@
 ---
 layout: post
 title: The Repository Pattern For Dummies
-category: Best Practices
+category: Repository
 ---
 
 You read a lot of tutorials about the Repository pattern which seem to contradict themselves. You asked the question on StackOverflow and you also got conflicting answers. What can you do? Can anyone explain this pattern in a _simple_ manner without throwing all kinds of code and codetentious buzzwords at you? Yes, I can!
@@ -13,35 +13,41 @@ You read a lot of tutorials about the Repository pattern which seem to contradic
  For you technical people, it looks like this (C# code)
 
   
-```csharp
+
+```csharp
 public interface IMyRepository
  {
 	BusinessObject Get(Guid id);
 	void Save(BusinessObject item);
 	IEnumerable<BusinessObject> Find(MyCriteria criteria);
  }
-```
+
+```
   Since I know ONLY about my business objects, my magic shelf (aka repository) will work only with those objects. And you can see that, amazingly enough, the interface-like panel is actually called an "interface" at least in some programming languages. But I don't know anything else about my magic shelf. Only that interface. And it's the only thing I need anyway.
 
  Now let me tell you a bit about that criteria stuff. You see, in many use cases I do need to use more than one business object, I actually need to use all the objects which for example have the LastUpdate older than an year. So, I'm telling the shelf to get me all objects matching that criteria. In technical terms, I'm creating a criteria object (which make sense for me, the Business Layer) which I'll pass to the Repository. The Repository takes that object and then applies some black magic on it (I really don't know what the Repository does, since it's **not MY concern**) and voila... it returns me exactly the objects I've asked for.
 
   
-```csharp
+
+```csharp
 public class OlderThan
  {
 	public DateTime LastUpdate;
  }
-```
+
+```
   Of course, for this simple scenario, it's easier to just have a special method like this
 
   
-```csharp
+
+```csharp
 public interface IMyRepository
  {
 	/* other methods */
 	IEnumerable<BusinessObject> GetOlderThan(DateTime lastUpdate);
  }
-```
+
+```
   I'll keep the criteria class for scenarios where I need to pass more than one parameter, but it's not like there's a rule, it depends on what's more easier or semantically suited for that use case. It's also important to say that I decide the shelf's functionality. In tech speak, this means that the _repository interface is designed by the business layer's needs_. That's why all the repository interfaces reside in the business layer, while their concrete implementation is part of the Persistence Layer (DAL).
 
  Oh, by the way, these shelves are **ALL MINE**! Only **I** can use them. I don't care about UI, Presentation, Reporting etc these shelves are only serving **me** (myself and I). If UI wants to do some queries, let it define its own shelves. I won't share mine. I've created them ONLY for MY purposes and they have _ONLY_ the functionality **I** need! I say that everyone should have their own shelves. Sharing is not caring, sharing is messing (around).
