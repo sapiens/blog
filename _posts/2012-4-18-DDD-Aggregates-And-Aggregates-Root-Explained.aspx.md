@@ -1,6 +1,6 @@
 ---
 layout: post
-title: DDD: The Aggregate And Aggregate Root Explained
+title: DDD - The Aggregate And Aggregate Root Explained
 category: Domain Driven Design
 ---
 

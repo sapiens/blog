@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Domain Driven Design: Aggregate Root Modelling Fallacy
+title: Domain Driven Design - Aggregate Root Modelling Fallacy
 category: Domain Driven Design
 ---
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: DDD: Entities And Value Objects Explained
+title: DDD - Entities And Value Objects Explained
 category: Domain Driven Design
 ---
 
