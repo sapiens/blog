@@ -7,7 +7,6 @@
 
 //@import "reset";
 @import "variables";
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700);
 // Syntax highlighting @import is at the bottom of this file
 
 /**************/
@@ -253,8 +252,8 @@ img {
   }
 .entry{
     color: #515151;
-    font-family: verdana,arial,sans-serif;
-    font-size: 0.85rem;
+    font-family: $georgia;
+    font-size: 1.1rem;
     line-height: 145%;
     text-shadow: 1px 1px 1px #f0f0f0;
 }
@@ -263,13 +262,12 @@ img {
   }
 
  footer{
- 	text-align:right;
+ 	text-align:center;
  	font-size:$fontSize*.75;
  }
 
   .read-more {
-    text-transform: uppercase;
-    font-size: 15px;
+      font-size: 15px;
   }
 }
 
