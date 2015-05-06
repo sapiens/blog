@@ -29,8 +29,12 @@ body {
     color:#fff;
 }
 
+.nav > li > a{
+	font-size:$fontSize*.85;
+}
 .nav > li.icons >a {
 	display:inline;
+	background-color:transparent;
 }
 
 h1, h2, h3, h4, h5, h6 {
