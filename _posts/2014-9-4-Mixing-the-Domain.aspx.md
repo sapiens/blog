@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Mixing the Domain
-category: None
+category: Domain Driven Design
 ---
 
 With DDD becoming more popular, it's like a "fight" between the old CRUD and the cool DDD. It's easy to assume that we have CRUD apps and DDD apps: this app is simple therefore it's CRUD, this app seems to have a rich domain, therefore we should be using DDD. But in practice, there are some apps which are 100% CRUD while no app is 100% DDD.
