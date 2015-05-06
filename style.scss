@@ -270,9 +270,13 @@ $h1Font:$fontSize;
 .entry{
     color: #434356;
     font-family: $georgia;
-    font-size: 1.1rem;
-    line-height: 145%;
+    font-size: 1rem;
+    line-height: 1.85;
     text-shadow: 1px 1px 1px #f0f0f0;
+    
+    p{
+    	margin-bottom:2rem;
+    }
     
     h2{
     	font-size:$h1Font*.85;
