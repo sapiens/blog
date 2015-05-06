@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Domain Events Toolkit Released And My Git Experience
-category: None
+category: Domain Driven Design
 ---
 
 So, I decided that my Domain Events Framework was a bit to dependent on Rx, not only as a library but also as a mindset. The DomainEvents pattern is codetty straightforward and I thought that a simplified and lighter alternative is better. I mean you don't have to understand the Rx principles in order to use it. Rx is an amazing library but way to overkill for this.
@@ -11,7 +11,8 @@ So, I decided that my Domain Events Framework was a bit to dependent on Rx, not 
  A quick tutorial
 
   
-```csharp
+
+```csharp
 //define an event
 public class OrderPlacedEvent:DomainEventBase<Order>
 {
@@ -40,7 +41,8 @@ DomainEvents.Publish(new OrderPlacedEvent(myOrder))
 
 //unregister the handler
 subscription.Dispose();
-```
+
+```
   Pretty simple, heh? But you can find more details [on Github](https://github.com/sapiens/DomainEventsToolkit/wiki/Usage) .
 
  Speaking of Github, this is also the day I joined the cool kids and made an account on github and actually using Git. My experience was codetty much ugly. Yes, Git is known as being hard to use on Windows and it lives up to the expectations. The Github site has more features than BitBucket but also I found it more cumbersome to write the docs. I write Markdown every day on Stackoverflow so I'm used to the syntax, but it was painful to write it on Github.
