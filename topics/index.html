@@ -3,9 +3,6 @@ layout: default
 title: Topics
 ---
 
-<h1>{{ page.title }}</h1>
-<p>&nbsp;</p>
-
 {% for tag in site.categories %} 
   <h2 id="{{ tag[0] | slugify }}">{{ tag[0] | capitalize }}</h2>
   <ul class="post-list">
