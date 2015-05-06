@@ -30,15 +30,15 @@ layout: default
   {% endif %}
 </li>
   {% for page in (1..paginator.total_pages) %}
-    <li>
+    
     {% if page == paginator.page %}
-      <em>{{ page }}</em>
+      <li class="active"><em>{{ page }}</em></li>
     {% elsif page == 1 %}
-      <a href="{{ '' | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
+    <li>  <a href="{{ '' | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a></li>
     {% else %}
-      <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
+      <li><a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a></li>
     {% endif %}
-    </li>
+    
   {% endfor %}
 <li>
   {% if paginator.next_page %}
