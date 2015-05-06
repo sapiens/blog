@@ -28,7 +28,6 @@ body {
     text-decoration: none;
     color:#fff;
 }
-
 .nav > li > a{
 	font-size:$fontSize*.85;
 }
@@ -241,10 +240,9 @@ img {
   	margin: 5px 0;
   	text-align:center;
   	font-size:$fontSize;
-    text-shadow: 1px 1px 1px #d0d0d0;
-    a{
+    	text-shadow: 1px 1px 1px #d0d0d0;
     	color:#333;
-    }
+    
   }	
   blockquote {
     margin: 1.8em .8em;
@@ -263,6 +261,7 @@ img {
 }
   .comments {
     margin-top: 10px;
+    padding:0 25px;
   }
 
  footer{
