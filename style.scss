@@ -236,7 +236,10 @@ img {
 //
 // .main
 //
-
+ #comments {
+    margin-top: 10px;
+    padding:0 25px;
+  }
 
 .posts > .post:last-child {
   padding-bottom: 1em;
@@ -291,10 +294,7 @@ $h1Font:$fontSize;
     
     
 }
-  #comments {
-    margin-top: 10px;
-    padding:0 25px;
-  }
+ 
 
  footer{
  	text-align:center;
