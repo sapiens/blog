@@ -10,7 +10,7 @@ category: Domain Driven Design
 
 **Aggregate Root**: the object from the Aggregate that enforces the aggregate's consistency and acts as its 'representative'
 
-**Entity**: an object representing a domain entity, that has a lifecycle and a stable identity throughout changes over time
+**Entity**: a business object representing a domain concept with a stable identity throughout changes over time
 
 **Value Object**: an immutable object representing a (composite) value that has domain significance
 
