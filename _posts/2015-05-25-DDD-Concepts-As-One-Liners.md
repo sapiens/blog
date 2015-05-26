@@ -35,5 +35,6 @@ category: Domain Driven Design
 **Event Sourcing**: express a business object state as a stream of events  
 
  
-
+ 
+Want to contribute? [Send me a PR](https://github.com/sapiens/blog/blob/gh-pages/_posts/2015-05-25-DDD-Concepts-As-One-Liners.md) 
       
