@@ -7,6 +7,7 @@ category: Domain Driven Design
 **Bounded Context** : all models sharing the same domain language
 
 **Aggregate**:
+
 - a group of objects that need to be consistent together in order to represent a valid domain concept
 - a consistency boundary around a domain concept, often represented as an object graph (from [Mathias](https://github.com/mathiasverraes))
 
