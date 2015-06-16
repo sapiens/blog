@@ -46,7 +46,7 @@ After using Nancy to build an Api app, I've decided to give it a try and use it 
 
  3. When defining a view convention the path **should not start** with '/' .
 
- ##View Conventions
+## View Conventions
 
  And speaking of view conventions, this is a very nice part of Nancy (you can get a similar feature in Asp.Net Mvc using my [MvcPowerTools library](https://github.com/sapiens/MvcPowerTools/wiki/ViewEngine)) that allows you to configure the view path you want. This means that you can put your some of your views in a View directory, others in next to the Nancy module or the view model itself. All these with just a couple lines of code.
 
@@ -84,7 +84,7 @@ protected override void ConfigureConventions(NancyConventions nancyConventions)
 
  As you can see there's no view extension mentioned. That's because the view locator searches for all files with that name regardless of their extensions and then uses the found extension to identify the view engine. This way, switching for Razor to Spark (for example) means you just have to install the Spark view engine and your code stays untouched.
 
- ##Html Tags and Helpers
+## Html Tags and Helpers
 
  In this regard, you don't have much. While there is a nuget bringing the asp.net mvc html helpers to Nancy, it's pre release and it's a port. This is not wrong, but I do prefer a more fluent (read: not ugly) way of doing things. Besides writing the html code directly , which I don't recommend as a general thumb rule, you can use the [HtmlTags](https://github.com/darthfubumvc/htmltags) library to define your own Html Helpers for Nancy. It's more work but it's trivial and you get some cool benefits.
 
@@ -192,6 +192,6 @@ Some interesting things:
 Creating your own helpers means it's easier to add changes later. For example, I can decide to create a helper `AsSubmit()` for a button or link tag, which can add or remove a specific css class or attribute or include directly a css class for a specific tag (such as "form-control" for textboxes). HtmlTags library has some support for defining your own html conventions (that can manipulate tag generation based on model) but the docs are lacking in this regard, AFAIK is still work in progress.
 
 
- ##Conclusion
+## Conclusion
 
  Clearly, using Razor with Nancy is not as smooth as with Asp.Net Mvc, but for me it's not a big deal. I like Nancy as a framework and the 'price' for using razor is quite small once you have a workflow defined. Actually, I'd say it's easier for a asp.net veteran to write a maintainable app with Nancy, while it's easier for a beginner to use Asp.Net Mvc. You can do everything with both, but with Nancy **you** are more in control.
