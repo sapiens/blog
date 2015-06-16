@@ -8,7 +8,7 @@ After using Nancy to build an Api app, I've decided to give it a try and use it 
 
  But first things first. The [docs](https://github.com/NancyFx/Nancy/wiki/Razor-View-Engine) do a pretty good job explaining how to configure Razor, however there are some gotchas.
 
- 1. Every bit of code you'll use in a razor view if it happens to be in a different assembly than the view, needs to be **manually** referenced, regardless if the current assembly reference it and your view has the required using statement. Coming from Asp.net Mvc you might be tempted to configure razor in app/web.config. Personally, I find it easier to use the programmatic option, that is implementing `IRazorConfig` . Now, everytime you need an assembly referenced in a Razor view just add it to that class.
+ 1. Every bit of code you'll use in a razor view if it happens to be in a different assembly than the view, needs to be **manually** referenced, regardless if the current assembly reference it and your view has the required using statement. Coming from Asp.net Mvc you might be tempted to configure razor in app/web.config. Personally, I find it easier to use the programmatic option, that is implementing `IRazorConfig`. Now, everytime you need an assembly referenced in a Razor view just add it to that class.
 
  Here's an example
 
