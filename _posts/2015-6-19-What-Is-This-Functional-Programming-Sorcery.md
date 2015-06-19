@@ -1,6 +1,6 @@
 ---
 layout: post
-title: What is This Functional Programming Sorcery
+title: Functional Programming Holy Wars
 category: Programming
 ---
 
