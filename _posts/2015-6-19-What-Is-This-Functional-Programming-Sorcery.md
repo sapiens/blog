@@ -19,4 +19,4 @@ As a funny note, I am a big fan of [DDD](http://blog.sapiensworks.com/topics/#do
 
 In conclusion, I and other developers will continue to use our OOP mindset and languages because it makes the most sens to us. Other devs will use functional programming. I don't think it should be a 'war' about which is better and which is the one true way. I agree with FP fans that FP is not very well known and it will benefit programmers (at least some of them) to be aware of it.
 
-If you have an opinion about why FP is great or why it sucks feel free to send me a [PR](https://github.com/sapiens/blog/blob/gh-pages/_posts/2015-6-19-What-Is-This-Functional-Programming-Sorcery.md)
+If you have an opinion about why FP is great or why it sucks feel free to send me a [PR](https://github.com/sapiens/blog/blob/gh-pages/_posts/2015-6-19-What-Is-This-Functional-Programming-Sorcery.md).
