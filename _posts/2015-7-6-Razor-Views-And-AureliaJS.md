@@ -99,7 +99,9 @@ This object simply computes the url that would match the razor view, based on a 
                    {
                        return null;
                    }
-                   return new GenericFileResponse(req, ctx);
+
+                     var file = Path.GetFullPath(Path.Combine(root, req.TrimStart('/')));
+                   return new GenericFileResponse(file, ctx);
                }
 
                return null;
