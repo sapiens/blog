@@ -6,10 +6,9 @@ category: Domain Driven Design
 
 I got this question on stackoverflow
 
- 
+
 > A brain is made up of billions of neurons, so if you have brain as your AR you potentially have a performance issue as its not feasible to retrieve all neurons when you want to activate some behaviour of a brain. If I make the neuron the AR, then its not trivial to validate its behaviour and there is the issue of creating new neurons within a brain. Which should be the AR, or should there be some other AR to encapsulate these
-> 
->  
+  
  I found the use case quite interesting because of the fact that we're dealing with billions of "children". So is the Brain an Aggregate Root (AR)? Is the Neuron a Value Object (VO) or an AR? Assuming that we want to model things as close as we know how the brain works I'll say it quick: Brain is an AR, Neuron is a VO and the Brain will always require ALL the neurons (yes, billions of them) every time you ask for a Brain object from the repository. So I'm saying to load billions of rows anytime you need a brain (sic). Maybe I need a brain too. Or I'm just a good Domain modeller. Here's how it is:
 
  A brain can't function without neurons, a brain **needs** the neurons. But does it need all of them? Well, let's see... I'm telling the Brain to learn a poem. The Brain will use some neurons to store that information. I tell the Brain to solve a math problem. The Brain will use the same or other neurons to do that. Now, do I (the client using the brain object) know which neurons are used for what behaviour? Or is it an implementation detail of the Brain? That's the point, only the Brain knows how to use the Neurons. It groups them in regions and it might use 1 or 10 regions for one single task. But nobody outside the Brain knows these details. This is proper encapsulation.
@@ -23,5 +22,3 @@ I got this question on stackoverflow
  The solution here is to load everything the Brain needs to do its job, because it's how the brain works according to the Domain (it needs ALL the neurons) and it's a maintainable solution. Maybe not the fastest one, but you're dealing with a complex notion where maintainability matters more and it isn't like you're using the same object for queries, right? And it's not about the number of neurons, it's about brain's data size. Do be aware that in this case, the Brain and Neurons have a direct relationship in a way that one can't work or it doesn't make sense without the other.
 
  Other cases might resemble this one, but the relationship can be one of association not definition. In those cases, you have grouping criteria and items ([forum and threads](http://www.sapiensworks.com/blog/post/2013/01/15/Domain-Driven-Design-Aggregate-Root-Modelling-Fallacy.aspx)) or different concepts working together ([table and chairs](http://www.sapiensworks.com/blog/post/2013/10/18/Modelling-Aggregate-Roots-Relationships.aspx))
-
-
