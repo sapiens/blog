@@ -5,7 +5,6 @@ category: Asp.Net
 ---
 
 From a design point of view if you want a proper separation of concerns (SoC) in a web app, it looks like this
-
 * You have a controller/action "in charge" of a http request
 * The controller maps the request to a command (input data)
 * The controller invokes an application service passing the input data. In a CQRS app, you might have a command send to a command handler, which is the implementation of an application use case, ergo an application service.
