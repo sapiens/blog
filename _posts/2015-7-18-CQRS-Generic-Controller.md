@@ -38,7 +38,7 @@ In a nutshell it look like this (although this list is common for both command/q
 
 ### Implementation
 
-Be aware that the implementation varies according to your app's needs. The only thing generic (sic) enough is the principle, the code needs to be adapted to your situation. This means the example below is not meant to be copy/pasted, it just shows you a concrete implementation. The code is an excerpt from the project I'm working on (while my project uses [NancyFx](http://nancyfx.org/) I'm gonna show you both nancy and asp.net mvc implementations).
+Be aware that the implementation varies according to your app's needs. The only thing generic (sic) enough is the principle, the code needs to be adapted to your situation. This means the example below is not meant to be copy/pasted, it just shows you a concrete implementation. The code is an excerpt from the project I'm working on (while my project uses [NancyFx](http://nancyfx.org/) I'm gonna show you asp.net webapi/mvc implementations).
 
 But first, let's see what we have and what we need. I'm using CQRS all the way up (or down) so my application services are command handlers while querying is done by query handlers (which work directly with the db). For both my convention is to have one _unique_ model in, one model out. I also have specific interfaces for each case
 
