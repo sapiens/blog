@@ -4,7 +4,7 @@ title: DDD Model Validation (Part I)
 category: .Net
 ---
 
-In my [codevious post](http://www.sapiensworks.com/blog/post/2011/04/16/Whats-Wrong-With-Model-Validation-In-AspNet-Mvc.aspx) I wrote about the shortcoming of the default validation of Asp.Net MVC. That doesn't mean though, that a Asp.Net MVC aplication can't use a different validation approach. Phil Haack and his team implemented this way as a helper to cut down some of the boring repetitive tasks. But when dealing with a complex application there are simply better ways to do it in order to mantain better code quality and in this post I'll show you one.
+In my [previous post](http://www.sapiensworks.com/blog/post/2011/04/16/Whats-Wrong-With-Model-Validation-In-AspNet-Mvc.aspx) I wrote about the shortcoming of the default validation of Asp.Net MVC. That doesn't mean though, that a Asp.Net MVC aplication can't use a different validation approach. Phil Haack and his team implemented this way as a helper to cut down some of the boring repetitive tasks. But when dealing with a complex application there are simply better ways to do it in order to mantain better code quality and in this post I'll show you one.
 
  Keep in mind that I'm using a simple example and this approach might seem overengineered but the purpose is to illustrate some concepts.
 
@@ -42,7 +42,7 @@ In my [codevious post](http://www.sapiensworks.com/blog/post/2011/04/16/Whats-Wr
  
 
   
-```csharp
+```csharp
 public class PostEntity
 {
     public int Id {get;set;}
@@ -77,7 +77,7 @@ public string Title {get;set;}
 public string Content {get;set;}
 public bool IsPublished {get;set;}
 }
-```
+```
   
 
  I'm keeping it at a minimum so that it's easier to follow. The model looks codetty ordinary, but you can see that you annotated the entity instead of the viewmodel (as you would have done normally). The CreatePostData (the view model)  is simply a DTO which will be used to create the PostEntity. The entity knows how to validate itself with the same DataAnnotations (i'm using my [CavemanTools](http://cavemantools.codeplex.com/) validator helper for that).
