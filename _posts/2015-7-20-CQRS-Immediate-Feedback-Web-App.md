@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  CQ(R)S And Providing Immediate Feedback In A Web App
+title:  CQ(R)S And Providing Immediate Feedback In A Web App Using A Service Bus
 category: Domain driven design
 ---
 
