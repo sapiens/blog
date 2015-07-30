@@ -8,7 +8,7 @@
     <!--[if lt IE 9]>
       <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,700' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 <!-- <script src="https://code.jquery.com/jquery-2.1.4.min.js"> </script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script> -->
@@ -21,31 +21,31 @@
 
   <body>
     <div class="container-fluid">
-      
+
         <header class="text-center site-header">
           <!-- <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.avatar }}" /></a> -->
 
-        
+
             <h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
             <p class="site-description hidden-xs">{{ site.description }}</p>
-       
+
 <div class="row">
   <div class="col-md-2 col-xs-12 col-md-offset-10">
      <nav>
-    
+
             <ul class="nav nav-pills">
               <li class="icons">  {% include svg-icons.html %}</li>
             <!--  <li><a href="{{ site.baseurl }}/">Home</a></li>
               <li><a href="{{ site.baseurl }}/about">About</a></li> -->
-             
+
             </ul>
-                  
-            
+
+
           </nav>
   </div>
 </div>
-         
-          
+
+
         </header>
 
 
@@ -56,16 +56,16 @@
 <aside class="col-md-3 col-xs-12">
   <h2>Topics</h2>
   <ul class="tag-box inline">
-{% assign tags_list = site.categories %}  
+{% assign tags_list = site.categories %}
   {% if tags_list.first[0] == null %}
-    {% for tag in tags_list %} 
-  
-      <li> 
+    {% for tag in tags_list %}
+
+      <li>
            <a href="{{ site.baseurl }}/topics/#{{ tag | slugify }}">{{ tag | capitalize }} <span> ({{ site.categories[tag].size }})</span></a></li>
     {% endfor %}
   {% else %}
-  
-    {% for tag in tags_list %} 
+
+    {% for tag in tags_list %}
       <li>
         <a href="{{ site.baseurl }}/topics/#{{ tag[0] | slugify }}">{{ tag[0] | capitalize }} <span>({{ tag[1].size }})</span></a></li>
     {% endfor %}
@@ -74,12 +74,12 @@
 </ul>
 </aside>
 </div>
-   
-  
+
+
         <footer class="footer">
         &copy; 2015 SapiensWorks.com
         </footer>
-    
+
     </div>
     {% include analytics.html %}
   </body>
