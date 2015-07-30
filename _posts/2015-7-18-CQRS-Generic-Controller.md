@@ -198,4 +198,4 @@ The point here is to extract the repetitive infrastructural behaviour into a con
 
 Of course, the great benefit here is decoupling of the app service from the api/mvc framework. Our app service knows _only_ about its input (nothing http or UI framework related) and the controller just prepares that input from a request. If the service needs a user id or an Ip, the input model can be decorated with an attribute that will tell the controller to populate that specific property from the model.
 
-Note that I'm not using a service bus in this example although I am using one in my app, but that's a special case that I'll handle (pun intended) in the next post.
+Note that I'm not using a service bus in this example although I am using one in my app, but that's a special case that I'll handle (pun intended) in the [next post](http://blog.sapiensworks.com/post/2015/07/20/CQRS-Immediate-Feedback-Web-App).
