@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  CQ(R)S And Providing Immediate Feedback In A Web App Using A Service Bus
-category: Domain driven design
+category: CQRS
 ---
 
 Whenever I'm developing a DDD web app, I'm using CQRS and Domain Events and this means I have a lot of commands and event handlers. Therefore I'm using a durable service bus which means that if the server crashes, all the unhandled messages are sent again to be handled. But I have a problem: all my commands are handled asynchronously because this is how my service bus works. And it works this way because a message can be handled anywhere in that process (usually in a background thread) or in another process if we have a distributed app.

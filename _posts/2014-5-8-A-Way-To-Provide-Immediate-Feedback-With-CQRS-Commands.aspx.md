@@ -1,7 +1,7 @@
 ---
 layout: post
 title: A Way To Provide Immediate Feedback In CQRS
-category: Best Practices
+category: CQRS
 ---
 
 Well, it's not just for CQRS, this post also applies for cases when you need to provide quick feedback for an action that should be valid from the business point of view (all relevant business rules must be valid) and you want to be DRY.
