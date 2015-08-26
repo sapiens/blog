@@ -11,6 +11,7 @@ But before we talk about solutions, let's understand the problem. An eventual co
 It sure looks like the app is in an inconsistent state, however, the use of the durable service bus will make sure that we are in an _eventually consistent_ state i.e things will be consistent very soon (it's just a matter of time). If you're used to the lower level db transaction, where everything is either commited or rolledback, eventual consistency looks quite dangerous and you might feel unsafe. Luckily, it's just the typical "out of the comfort zone" feeling. Eventual consistency might look fragile and complicated to handle but once you get used to it, it will become second nature.
 
 The main 'ingredient' in dealing with eventual consistency is proper idempotency handling. Considering a process can be interrupted at any time and then executed again from the beginning, we need a way to ensure that a repeated operation changes a model only once. I'm going to show you 2 ways of doing this, but first there are some "rules":
+
 - Every operation has an unique id (guid);
 - The aggregate root  needs the operation id to be set before any changes.
 
