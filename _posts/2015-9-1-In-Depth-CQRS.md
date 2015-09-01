@@ -26,7 +26,7 @@ To make things even more fun, CQRS and CQS work _very well_ together, however th
 
 ...but one doesn't always imply the other. And speaking about events, an event driven architecture or the Domain Events pattern doesn't imply ES. They're all different things that are used together because they have great synergy. In probably 99.99% of cases, an app using ES will also use CQRS (and a message driven architecture), because it needs a queryable read model, different than the even store model (hence CQRS).
 
-## CQRS: Command Model
+## CQRS: The Command Model
 
 Well, "command model" is not a very accurate term, because in practice there are 2 models: application(as in non-persistence) and persistence. For now on, when I'm referring to the application, I'll say "business or domain" because this is where things make more sense. But it's good to know that we're talking about principles that work and can be used outside the domain layer (if you're thinking in layers).
 
@@ -39,7 +39,7 @@ As I've said, it's complicated and it's the least maintainable solution. A gener
 We can get away with a generic, non-queryable store because we only need basic CRUD functionality from it: Add, Get, Save, Delete. For the use case which require more than one entity, the the service will use a domain query which will use both the query persistence model and command persistence model to do its job.
 
 
-## CQRS: Query Model
+## CQRS: The Query Model
 
 As with the command model, we still have the query application model and the query persistence model. I'll start with persistence because it's the easiest one: this is your queryable model plain and simple. With a RDBMS this is where you're writing SQL, doing joins and other fun stuff. With a document db you might have query indexes. You can also have very specific models i.e serialized pre-computed view models or query application models. Pretty much anything that will allow you to query things fast.
 
