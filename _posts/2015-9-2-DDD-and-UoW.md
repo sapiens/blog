@@ -4,7 +4,7 @@ title: The Unit of Work and Transactions In Domain Driven Design
 category: Domain driven design
 ---
 
-As a principle, the Unit of Work (UoW) pattern is about ensuring consistency by **persisting** a group of changes as a unit (all at once). Basically, it's an all or nothing operation and the point of this is we don`t want to end up with inconsistencies. This is the main idea and it`s implemented by a db transaction or the ORM`s DbCOntext, ISession etc which themselves in the end will use a db transaction.
+As a principle, the Unit of Work (UoW) pattern is about ensuring consistency by **persisting** a group of changes as a unit (all at once). Basically, it's an all or nothing operation and the point of this is we don't want to end up with inconsistencies. This is the main idea and it's implemented by a db transaction or the ORM's DbCOntext, ISession etc which themselves in the end will use a db transaction.
 
 As you can see, the UoW is very useful and very persistence related. The problem is many devs trying to do DDD, end up needing something that surely looks like a UOW. However, its not.
 
