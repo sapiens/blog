@@ -38,6 +38,9 @@ SqlFuManager.Configure(c =>
                c.AddProfile(SqlServer2012Provider.Instance,"[connection string]");            
            });
 
+//factory, register it in your Di Container
+var getDb=SqlFuManager.GetDbFactory();
+
 //pocos
  public class SomePost
      {
