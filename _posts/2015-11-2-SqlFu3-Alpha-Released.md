@@ -142,8 +142,6 @@ _getDb.Do(db=> {
  //build query but map only the first column
   db.GetQueryValue(t => t.From<SomePost>().Where(d => d.State == SomeEnum.Last).AllColumns());
 
- //build query from SomePost, select all columns and map them to SomePost
-  db.GetSingle(d => d.From<SomePost>().Select(c => new SomePost()));
 
 //simple insert
   var id=db.Insert(new SomePost() {Title = "my title"}).GetInsertedId<int>();
