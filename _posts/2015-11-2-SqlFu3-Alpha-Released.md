@@ -139,7 +139,7 @@ _getDb.Do(db=> {
 
   var func = db.GetDbFunctions();
 
- //build query and get one first column
+ //build query but map only the first column
   db.GetQueryValue(t => t.From<SomePost>().Where(d => d.State == SomeEnum.Last).AllColumns());
 
  //build query from SomePost, select all columns and map them to SomePost
