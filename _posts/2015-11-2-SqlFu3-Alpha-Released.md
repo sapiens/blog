@@ -6,7 +6,7 @@ category: Sqlfu
 
 I'm happy to report that SqlFu 3 finally got to a stage where it can be publicly usable. Although an alpha, it's more of a pre-beta, as the features I wanted are all in. But things can change, so that's why it's still an alpha for now.
 
-Warning! Version 3 is NOT backwards compatible.
+**Warning!** Version 3 is NOT backwards compatible.
 
 ## It's not an ORM
 At least in SqlFu case, "micro-ORM" is the wrong name. SqlFu is a data mapper (maps data to commands and rows to objects) with productivity helpers. While the objective of an ORM is to pretend Sql doesn't exist and we're all having fun using objects, in SqlFu we think sql and we're writing sql, but many of the most common operations are provided as strongly typed helpers (which are NOT Linq, but specialised string builders). A bit of abstraction exists, but it's merely a side effect, not an objective.
