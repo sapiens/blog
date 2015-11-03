@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Itroducing SqlFu 3
+title: Introducing SqlFu 3
 category: Sqlfu
 ---
 
