@@ -19,7 +19,7 @@ So, I get this glorious email
 >    Cheers,
 >
 >    [whatever]
->    (VP & Director of Engineering, [bla bla]) 
+>    VP & Director of Engineering, [bla bla] 
 
 Obviously, I was delighted. After all these years on SO and around 300(ish) answers about Domain Driven Design, application architecture and design patterns, finally someone considered that I'm a good material for a **junior/intermediate** dev. After all, as mr VP said, my profile ("SOLID web apps architect") suggests that.
 
