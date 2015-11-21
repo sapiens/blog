@@ -14,7 +14,7 @@ So, I get this glorious email
 >
 >    You can see our current job ad at  http://jobview.monster.ca/Junior-or-Intermediate-Software-Developer!-[bla bla].aspx and your profile suggests that you may be interested in hearing more about the type of development work we do at [bla]. If this is not the case then please let me know and I will be sure not to contact you again.
 >
->    I'd love to have a chance to chat with you to tell you more about [bla] (you can also find out more at our SO company page) and to find out a bit more about you.
+>    I'd love to have a chance to chat with you to tell you more about bla (you can also find out more at our SO company page) and to find out a bit more about you.
 >
 >    Cheers,
 >
