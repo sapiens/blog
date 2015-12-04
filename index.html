@@ -2,6 +2,7 @@
 layout: default
 ---
 
+
 <div class="posts">
   {% for post in paginator.posts | sort: 'date' %}
     <article class="post">
@@ -13,9 +14,9 @@ layout: default
         {{ post.content }}
       </div>
      <footer>
-      <a href="{{ site.baseurl }}{{ post.url }}#comments" class="read-more">Leave a comment</a> 
+      <a href="{{ site.baseurl }}{{ post.url }}#comments" class="read-more">Leave a comment</a>
      </footer>
-      
+
     </article>
   {% endfor %}
 </div>
@@ -30,7 +31,7 @@ layout: default
   {% endif %}
 </li>
   {% for page in (1..paginator.total_pages) %}
-    
+
     {% if page == paginator.page %}
       <li class="active"><a href="#">{{ page }} <span class="sr-only">(current)</span></a></li>
     {% elsif page == 1 %}
@@ -38,7 +39,7 @@ layout: default
     {% else %}
       <li><a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a></li>
     {% endif %}
-    
+
   {% endfor %}
 <li>
   {% if paginator.next_page %}

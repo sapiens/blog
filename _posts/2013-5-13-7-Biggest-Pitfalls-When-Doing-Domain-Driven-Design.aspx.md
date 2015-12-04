@@ -37,18 +37,18 @@ category: Domain Driven Design
  
 ### **Treating the [Aggregate Root ](http://www.sapiensworks.com/blog/post/2012/04/18/DDD-Aggregates-And-Aggregates-Root-Explained.aspx)(AR) as a container**
 
- This is a very common side effect of the codevious pitfall, it's very easy to consider that all an AR does is to 'hold' the Aggregate's other objects, especially Value Objects. This is tricky stuff actually, and the only way to not fall into the trap is to properly understand the domain.
+ This is a very common side effect of the previous pitfall, it's very easy to consider that all an AR does is to 'hold' the Aggregate's other objects, especially Value Objects. This is tricky stuff actually, and the only way to not fall into the trap is to properly understand the domain.
 
  As an example, let's take the famous Order. Most of the time you'll find the Order as a collection of OrderLines which can be added or removed plus some methods to calculate totals, taxes etc. However.... an Order is not the Cart where you add/remove products until you submit the order. The Order is the list of products and quantities the customer ordered from you. That's it and nothing more and this means the Order is immutable. It doesn't even has methods to calculate totals because the client didn't order totals or taxes. All the order's financial data is in an Invoice. This means you don't add discounts to an Order either, again because the customer didn't order discounts.
 
  The Cart is a container of products and quantities until submitted when it becomes an Order which has an Invoice attached. The Order seems to 'hold' OrderLines but in fact, an Order can't exist without at least 1 OrderLine. A Cart can exists with 0 items in it, it's called an empty cart. Also, the importance of the Order is not that it's (in the end) just a list of OrderLines but a business document. The order lines are just an implementation detail.
 
- As a thumb rule, if all the AR does is to have a list of something, without recodesenting a specific business concept, it's a strong hint you didn't model an AR but a simple container.
+ As a thumb rule, if all the AR does is to have a list of something, without representing a specific business concept, it's a strong hint you didn't model an AR but a simple container.
 
  
 ### **Tying the Domain to the ORM, an artifact of the database centric mindset**
 
- When using an ORM, the ORM becomes the relational database but without Sql and codesented in an object oriented view. Mixing the ORM with the Domain it's like writing Sql from your business layer: a violation of the Separation of Concerns (SoC) principle. The ORM is not here for the Domain, it's here to protect developers from the ugly Sql.
+ When using an ORM, the ORM becomes the relational database but without Sql and presented in an object oriented view. Mixing the ORM with the Domain it's like writing Sql from your business layer: a violation of the Separation of Concerns (SoC) principle. The ORM is not here for the Domain, it's here to protect developers from the ugly Sql.
 
  
 ### **The "One model to rule them all" approach**
@@ -57,6 +57,6 @@ category: Domain Driven Design
   * [Bounded Context](http://www.sapiensworks.com/blog/post/2012/04/17/DDD-The-Bounded-Context-Explained.aspx) (BC).  
     A business concept may have slightly different definition depending on the context. In the Finance BC, a Product might mean only an id and a cost while in the Marketing BC, a product is an id, name and other relevant marketing details. The Inventory BC has all the technical details of the Product. The point is each BC understands something else when using the same concept. And the Inventory definition resemble but it's not the same as the Marketing definition. Even if they share the same name 'Product' they are different models, relevant only in their specific BC. 
   * Technical constraints.  
-    Even if you have only one definition of the Product, if the object is not anemic i.e it is an aggregate root with behavior it will be a technical challenge to update and query the model. You can store it optimized for querying but it will be complicated to save/restore it from the db. You can serialize the object (trivial save/restore) but it's a pain (very slow) to query. In this case you need to have 2 models: one rich for updating and one 'dumb' for querying ([CQRS](http://www.sapiensworks.com/blog/post/2013/05/04/CQRS-Explained.aspx)). There's no need to complicate your life, good code is simple, clean code.  You know  you're applying DDD right when the Model is clear and flows naturally. Yes, it's a bit Zen like. And you can be codetty sure that you're doing it wrong when everything is so **complicated** that you cringe inside every time you have to change something. Remember this thumb rule: if it hurts then you're doing it wrong.
+    Even if you have only one definition of the Product, if the object is not anemic i.e it is an aggregate root with behavior it will be a technical challenge to update and query the model. You can store it optimized for querying but it will be complicated to save/restore it from the db. You can serialize the object (trivial save/restore) but it's a pain (very slow) to query. In this case you need to have 2 models: one rich for updating and one 'dumb' for querying ([CQRS](http://www.sapiensworks.com/blog/post/2013/05/04/CQRS-Explained.aspx)). There's no need to complicate your life, good code is simple, clean code.  You know  you're applying DDD right when the Model is clear and flows naturally. Yes, it's a bit Zen like. And you can be pretty sure that you're doing it wrong when everything is so **complicated** that you cringe inside every time you have to change something. Remember this thumb rule: if it hurts then you're doing it wrong.
 
 
