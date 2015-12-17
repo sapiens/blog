@@ -32,9 +32,9 @@ export function configure(aurelia) {
 
 ```
 
-Now we need to create the modal element itself. The plugin comes with a 'Prompt' example, but we won't be using it. So let's create the confirmation modal. First the view model (I'm using TypeScript)
+Now we need to create the modal element itself. The plugin comes with a 'Prompt' example, but we won't be using it. So let's create the confirmation modal. First the view model (I'm using Typescript)
 
-```typescript
+```javascript
 
 import {autoinject} from "aurelia-framework";
 import {DialogController} from 'aurelia-dialog';
@@ -91,7 +91,7 @@ Now, we won't be using this element directly, we'll be opening the dialog throug
 
 This is what will be actually using in our templates. Let's see its definition:
 
-```typescript
+```javascript
 
 import {autoinject, bindable} from "aurelia-framework";
 import {DialogService} from "aurelia-dialog";
@@ -138,7 +138,7 @@ The 'result' argument has 2 fields: `wasCancelled` which is obvious what it does
 
 Now we can use our `Delete` element where we need it. As an example, let's say I have a list of names
 
-```typescript
+```javascript
 
     data=['John','Mary','David'];
     
