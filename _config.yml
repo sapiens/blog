@@ -58,7 +58,7 @@ baseurl:
 # !! You don't need to change any of the configuration flags below !!
 #
 
-markdown: redcarpet
+#markdown: redcarpet
 highlighter: rouge
 permalink: post/:year/:month/:day/:title
 
