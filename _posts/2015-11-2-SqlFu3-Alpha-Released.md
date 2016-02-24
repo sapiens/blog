@@ -4,6 +4,8 @@ title: Introducing SqlFu 3
 category: Sqlfu
 ---
 
+Beta version is [available now](https://github.com/sapiens/SqlFu/blob/v3-devel/README.markdown). The rest of the post is obsolete.
+
 I'm happy to report that SqlFu 3 finally got to a stage where it can be publicly usable. Although an alpha, it's more of a pre-beta, as the features I wanted are all in. But things can change, so that's why it's still an alpha for now.
 
 **Warning!** Version 3 is NOT backwards compatible.
