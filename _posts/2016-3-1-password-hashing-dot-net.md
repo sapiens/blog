@@ -51,6 +51,7 @@ PasswordHash.UnpackBytes = (packed,saltSize) =>  /* 'recover' the salt and passw
 ```    
 
 Basically, we have these options to ensure an attacker won't have an easy job:
+
 * Variable/Secret key (password hash) length
 * _and/or_ Variable/Secret iterations count
 * _and/or_ Variable/Secret salt size
