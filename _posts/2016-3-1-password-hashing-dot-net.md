@@ -1,7 +1,7 @@
 ---
 layout: post
 title: C# (.Net) Password Hashing The Easy Way 
-category: .Net
+category: .net
 ---
 
 We know we shouldn't store passwords at all, not even encrypted nevermind in plain text. And by encrypted I mean something like AES, Base64 encoding is _not_ encryption. In a nutshell, we need to store only salted hashes so that a password can't be reversed and an attacker shouldn't find a common pattern that will lead to breaking the password. As any developer knows, we want a hash which is slow to generate, so fast algorithms like MD5, Murmur or the SHA family shouldn't be used. For best results something like bcrypt or Pbkdf2 should be used with a high number of iterations. 
