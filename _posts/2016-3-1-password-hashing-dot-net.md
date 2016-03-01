@@ -9,6 +9,7 @@ We know we shouldn't store passwords at all, not even encrypted nevermind in pla
 In order to make things easy, I've come up with a value object that does the 'hard' work and it's versatile enough to allow you to customize things. It's a class called `PasswordHash` available as part of my [CavemanTools](https://www.nuget.org/packages/CavemanTools/4.0.0) library or you can copy/paste the code directly from [here](https://github.com/sapiens/cavemantools/blob/master/src/CavemanTools/PasswordHash.cs) .
 
 First thing is to decide on the hash length and I suggest to set a value > 32. This value should vary from one app to another and should be secret. I also recommend to set a (secret)salt size and a (secret) iteration count.
+
 ```csharp
 PasswordHash.KeySize = 40; //default is 32
 PasswordHash.DefaultSaltSize = 32; //default is 32 
@@ -18,6 +19,7 @@ PasswordHash.DefaultIterations = 70000; //default is 64000
 Be aware that the number of iterations affects the hash generation time. The default is a good value (it takes around 200ms on my PC) but you might want to increase that for sensitive apps. 
 
 Let's use it
+
 ```csharp
 var pwd = new PasswordHash("some pwd");
 
@@ -36,6 +38,7 @@ var pwd=PasswordHash.FromHash(hash,PasswordHash.DefaultSaltSize,PasswordHash.Def
  //check pasword
  if (pwd.IsValidPassword("other pwd")) { }
 ```
+
 ### Customizing how the final hash is generated
 
 Regardless of how you keep it in the database, it's important to be aware that the final hash is a combination of salt and the password hash. By default, salt is stored first then the password hash. And that's why we want to change the passwords hash length or/and the salt size, so that an attacker would have a hard time guessing when the salt ends and when the hash begins. If an attacker knows either, they already have 2 pieses of the puzzle. 
