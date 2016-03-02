@@ -9,6 +9,7 @@ We are in 2016 and I still see developers proud that they're using Ado.Net and w
 As the author of an object mapper a.ka. micro-ORM called [SqlFu](https://github.com/sapiens/SqlFu/tree/v3-devel) and for version 3 I've decided to change how I do the benchmarks. In previous versions, I've taken the easy way and benchmarked _whole queries_ but this meant I also benchmarked the server configuration and ado.net performance. In v3, I've decided to test **only** the maping part from a `DbDataReader` to a POCO. This way, I could measure exactly the differences between manual mapping and code generated mapping.
 
 The results were pretty much what I've expect them to be:
+
 * manualy mapping to a POCO is between 80-100%+ faster then code generated
 * manualy mapping to an anonymous object is similar to the POCO use case
 * manualy mapping to dynamic is ~50% **slower** than code generated.
