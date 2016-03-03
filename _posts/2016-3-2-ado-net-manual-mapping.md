@@ -11,7 +11,7 @@ As the author of an object mapper a.ka. micro-ORM called [SqlFu](https://github.
 The results were pretty much what I've expect them to be:
 
 * manualy mapping to a POCO is between 80-100%+ faster than code generated
-* manualy mapping to an anonymous object is similar to the POCO use case
+* manualy mapping to an anonymous object (projection) is similar to the previous case
 * manualy mapping to dynamic is ~50% **slower** than code generated.
 
 Yes, it's _faster_ to use SqlFu to map to dynamic, but that's not the point. In fairness, when doing dynamic mappings, we're cheating a bit, by using specially crafted objects.However, the interested part wasn't this. The interesting part was transforming the relative numbers to absolute numbers.
