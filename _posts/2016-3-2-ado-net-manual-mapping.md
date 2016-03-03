@@ -16,7 +16,7 @@ The results were pretty much what I've expect them to be:
 
 Yes, it's _faster_ to use SqlFu to map to dynamic, but that's not the point. In fairness, when doing dynamic mappings, we're cheating a bit, by using specially crafted objects.However, the interested part wasn't this. The interesting part was transforming the relative numbers to absolute numbers.
 
-Sure, manually mappings are 2x faster but you see, it's the difference between 4 microseconds and 8 microseconds. Let me put that into perspecitve: assuming you have a 1 ms query, which is a _very fast_ query, the performance gain you get by doing things manually is .... 0.4%. For a 1 ms query. Let that sink a bit.
+Sure, manually mappings are 2x faster but you see, it's the difference between 4 microseconds and 8 microseconds. Let me put that into perspecitve: assuming you have a 1 ms query, which is a _very fast_ query, the performance gain you get by doing things manually is .... 0.4%. For a 1 ms query. Let that sink in for a bit.
 
 You're spending at least 30 seconds (that's 30 000 000 microseconds) writing boring, repetitive and error prone code for a 0.4% performance gain (and that's when you're query is already fast). Sure, you might say that "every microsecond counts" but if you need _that_ kind of performance, I'm afraid you've chosen the wrong platform to start with. .Net is fast, but in a scenario where _every_ microsecond matters, carefully written C code is much better. 
 
