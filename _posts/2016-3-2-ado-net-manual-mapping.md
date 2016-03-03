@@ -1,6 +1,6 @@
 ---
 layout: post
-title: The Myth of POCO Manual Mapping Performance 
+title: The Myth of Manual POCO Mapping Performance 
 category: .net
 ---
 
