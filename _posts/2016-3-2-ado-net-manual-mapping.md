@@ -10,7 +10,7 @@ As the author of an object mapper a.ka. micro-ORM called [SqlFu](https://github.
 
 The results were pretty much what I've expect them to be:
 
-* manualy mapping to a POCO is between 80-100%+ faster then code generated
+* manualy mapping to a POCO is between 80-100%+ faster than code generated
 * manualy mapping to an anonymous object is similar to the POCO use case
 * manualy mapping to dynamic is ~50% **slower** than code generated.
 
