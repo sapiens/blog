@@ -6,7 +6,7 @@ category: .net
 
 We are in 2016 and I still see developers proud that they're using Ado.Net and writing all that boring mapping code because "it's faster" and they want maximum performance. Well, the phrase "stealing from your employer" comes to mind and in this post I'm going to tell you why.
 
-As the author of an object mapper a.ka. micro-ORM called [SqlFu](https://github.com/sapiens/SqlFu/tree/v3-devel) and for version 3 I've decided to change how I do the benchmarks. In previous versions, I've taken the easy way and benchmarked _whole queries_ but this meant I also benchmarked the server configuration and ado.net performance. In v3, I've decided to test **only** the maping part from a `DbDataReader` to a POCO. This way, I could measure exactly the differences between manual mapping and code generated mapping.
+As the author of an object mapper a.ka. micro-ORM called [SqlFu](https://github.com/sapiens/SqlFu/tree/v3-devel), for version 3 I've decided to change how I do the benchmarks. In previous versions, I've taken the easy way and benchmarked _whole queries_ but this meant I also benchmarked the server configuration and ado.net performance. In v3, I've decided to test **only** the maping part from a `DbDataReader` to a POCO. This way, I could measure exactly the differences between manual mapping and code generated mapping.
 
 The results were pretty much what I've expect them to be:
 
