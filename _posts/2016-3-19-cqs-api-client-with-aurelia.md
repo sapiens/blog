@@ -9,6 +9,7 @@ Every SPA needs a way to communicate with the server and Aurelia features a `Htt
 On my server, I'm using the following conventions
 
 * For commands: `[POST] baseUrl/{command}` . For every request I'm returning a `CommandResult` which looks like this
+
 ```javscript
 export interface ICommandResult {
     errors: any;
@@ -21,8 +22,7 @@ export interface ICommandResult {
 So, my API client interface looks like this 
 
 ```javascript
-interface IApiClient{
-    
+interface IApiClient{    
      execute(cmd: string, data: any, func: (res: ICommandResult) => void);
      query<T>(query: string, func: (result: T) => void, params?: any);
 }
@@ -95,6 +95,7 @@ this.api.query<MyResult>("getapicommanddata", result => {
 Plain and simple.
 
 Here's the full ApiClient class in all its glory
+
 ```javascript
 
 import {HttpClient, HttpClientConfiguration,json} from "aurelia-fetch-client";
