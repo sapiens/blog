@@ -64,6 +64,7 @@ Want to hire good developers, with minimum effort and cost?
 * See how the candidate performs in your day-to-day working environment, solving real business problems.
 
 To quote a redditor
+
 >If you want to hire a truck driver to take your goods to New York, you put it on a truck and see how fast and safe he can reach New Your, you don't test its truck-drving-to-new-york skills by asking him to make stunts on a bicycle.
 
 
