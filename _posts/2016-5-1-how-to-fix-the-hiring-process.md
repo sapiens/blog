@@ -30,7 +30,7 @@ A business doesn't have time to waste, it wants value as fast as possible. And i
 
 ## "He who doesn't have wise men should buy them" - Romanian Saying
 
-Another problem is that it seems very trendy to disregard the practical experience of a candidate. Not only this is insulting, but it's a sign of the process' stupidity. In any field (except IT?!) experience is a highly priced asset. You know why? Because it can't be taught and it can't be faked. I've seen this reasoning from some interviewers: "people lie all the time on their CV" or "I don't have 2 hours to spend to read your blog, your StackOverflow profile or your OSS work [therefore I will ignore it]".
+Another problem is that it seems very trendy to disregard the practical experience of a candidate. Not only this is insulting, but it's a sign of the process' stupidity. In any field (except IT?!) experience is a highly priced asset. You know why? Because it _can't be taught_ and it _can't be faked_. I've seen this reasoning from some interviewers: "people lie all the time on their CV" or "I don't have 2 hours to spend to read your blog, your StackOverflow profile or your OSS work [therefore I will ignore it]".
 
 Well, if YOU, the technical interviewer, a senior developer, can't tell if someone lies when they're talking about their experience, it means that YOU don't have experience and you shouldn't conduct technical interviews. Any developer worth their salt will detect in 2-5 minutes if a candidate tries to bullshit their way out of a question. Only people who don't have a clue think you can fake experience. They're detected so fast it's not even funny.
 
@@ -38,11 +38,11 @@ And you don't need hours to assess someone's technical level. A quick read of th
 
 Things like "every engineer should know this [trivia bit that shows how smart I am]" are also pointless, _unless_ your daily work requires everyone to use that. Don't ask about things that "anyone who took a 101 CS class should know" if they aren't needed. Remember that TV show "Are You Smarter Than a 5th Grader"? Well, are you? After all, they are things every 5th grader knows. How come YOU don't them?  
  
- ## A simple solution
+## A simple solution
  
- If we apply a bit of common sense (I've heard Walmart sells it, limited offer, get it while it lasts), a technical interview can be a very efficient and cost effective affair. A candidate who seems good enough to be invited to an on-site interview should be treated for 1 day like a new member of the team. They will have to work with the team to solve some problems that doesn't require a deep understanding of the existing code base. For example: ask them to fix a simple bug, implement a minor functionality, refactor some technical debt etc. But the point here is to put them into a context where they can deliver business value.
+If we apply a bit of common sense (I've heard Walmart sells it, limited offer, get it while it lasts), a technical interview can be a very efficient and cost effective affair. A candidate who seems good enough to be invited to an on-site interview should be treated for 1 day like a new member of the team. They will have to work with the team to solve some problems that doesn't require a deep understanding of the existing code base. For example: ask them to fix a simple bug, implement a minor functionality, refactor some technical debt etc. But the point here is to put them into a context where they can deliver business value.
  
- As an interviewer you get these benefits:
+As an interviewer you get these benefits:
 
  * Simple and natural to implement, you don't need special training or reading what questions to ask 
  * See how the candidate communicates 
