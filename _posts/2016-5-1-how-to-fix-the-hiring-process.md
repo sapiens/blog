@@ -36,7 +36,7 @@ Well, if YOU, the technical interviewer, a senior developer, can't tell if someo
 
 And you don't need hours to assess someone's technical level. A quick read of their CV or better, their code, technical blog (just look at the titles) or SO profile(number of answers/questions ratio for the relevant tags) and in 10 minutes you have a vague idea (junior, middle, senior). Then you can just talk to the candidate about their work and you can (gasp!) solve together a real problem. Using a computer, writing code, delivering value. 
 
-Things like "every engineer should know this [trivia bit that shows how smart I am]" are also pointless, _unless_ your daily work requires everyone to use that. Don't ask about things that "anyone who took a 101 CS class should know" if they aren't needed. Remember that TV show "Are You Smarter Than a 5th Grader"? Well, are you? After all, they are things every 5th grader knows. How come YOU don't them?  
+Things like "every engineer should know this [trivia bit that shows how smart I am]" are also pointless, _unless_ your daily work requires everyone to use that. Don't ask about things that "anyone who took a 101 CS class should know" if they aren't needed. Remember that TV show "Are You Smarter Than a 5th Grader"? Well, are you? After all, they are things every 5th grader knows. How come YOU don't know them?  
  
 ## A simple solution
  
