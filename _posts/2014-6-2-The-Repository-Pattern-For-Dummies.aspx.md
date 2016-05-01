@@ -1,6 +1,6 @@
 ---
 layout: post
-title: The Repository Pattern For Dummies
+title: The Repository Pattern Explained (For Dummies)
 category: Repository
 ---
 
