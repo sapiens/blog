@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "DDD is expensive" Is A Myth 
+title: DDD is expensive Is A Myth 
 category: Domain Driven Design
 ---
 
