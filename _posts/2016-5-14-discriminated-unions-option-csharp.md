@@ -17,7 +17,6 @@ fruits.When<Orange>(o=> {} );
 var apple=fruits.As<Apple>();
 
 //dynamic type
-
 var apple=fruits.Value;
 
 if (fruits.Is<Orange>()) {} 
