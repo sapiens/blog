@@ -97,7 +97,11 @@ aside h2 {
 }
 
 .tag-box a{
- font-size:$fontSize*.75;
+ font-size:$fontSize*.8;
+}
+
+.tag-box li{
+  padding:.25rem 0;
 }
 
 h3 {
