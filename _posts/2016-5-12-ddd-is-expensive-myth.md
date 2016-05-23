@@ -4,7 +4,7 @@ title: DDD Is Expensive Is A Myth
 category: Domain Driven Design
 ---
 
-If I only had a dollar every time I read something similar to this: "DDD is expensive and it should be used ONLY if the domain is BIG, behaviour rich and only for the core domain, not for the whole application" .
+If only I had a dollar every time I read something similar to this: "DDD is expensive and it should be used ONLY if the domain is BIG, behaviour rich and only for the core domain, not for the whole application" .
 
 Well... today, I would say DDD is mainstream. Sure, from the crowd of people "doing DDD" only a minority actually does DDD, but nevertheless, there are plenty of experienced developers or architects who can properly apply DDD. Now, DDD isn't expensive by its intrinsic nature, but the people who can apply it aren't that cheap and if they deal with a complex domain, it could take some time. So, in the end you can say it's expensive.
 
