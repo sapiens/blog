@@ -20,7 +20,7 @@ html {
 
 
 body {
-	background:#f7f6f2;
+	background:#fcfcfc;
   font: $fontSize $helvetica;
   color: $darkGray;
 }
@@ -252,7 +252,7 @@ img {
 }
 $h1Font:1.5em;
 .post {
-  background-color: #fdfdfd;
+  background-color: #fff;
     border: 1px solid #e5e2da;
     border-radius: 5px;
     margin: 1rem;
@@ -279,8 +279,8 @@ $h1Font:1.5em;
 .entry{
     color: #434356;
     font-family: $georgia;
-   font-size: 1rem;
-    line-height: 1.7em;
+   font-size: 1.1em;
+    line-height: 1.8em;
 
     p{
     	margin-bottom:1.25rem;
