@@ -250,7 +250,7 @@ img {
   padding-bottom: 1em;
   border-bottom: none;
 }
-$h1Font:$fontSize;
+$h1Font:$fontSize*1.5;
 .post {
   background-color: #fdfdfd;
     border: 1px solid #e5e2da;
@@ -279,8 +279,8 @@ $h1Font:$fontSize;
 .entry{
     color: #434356;
     font-family: $georgia;
-   // font-size: .85rem;
-    line-height: 1.5em;
+   font-size: 1rem;
+    line-height: 1.7em;
 
     p{
     	margin-bottom:1.25rem;
