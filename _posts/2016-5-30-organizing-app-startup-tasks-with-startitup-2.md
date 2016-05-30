@@ -234,11 +234,9 @@ My current project is a Nancy app, so besides other stuff I do need to bootstrap
     }
     
 ```
-When adding Nancy, we specify manually what bootstrapper to use and the bootstrapper will use our configuration object to return the Autofac instance when Nancy needs it. That wasn't that hard, was it?
+When adding Nancy, we specify manually what bootstrapper to use and the bootstrapper will use our configuration object to return the Autofac instance when Nancy needs it. That wasn't that hard, was it? OK, now we have our tasks, we need one more thing
 
- OK, now we have our tasks, we need one more thing
- 
- ```csharp
+```csharp
  public class Startup
     {
         public void Configuration(IAppBuilder app)
@@ -246,7 +244,6 @@ When adding Nancy, we specify manually what bootstrapper to use and the bootstra
             StartIt.Up(new AppSettings(app));
         }
     }
-    
 ```
 
 Yep, you need to invoke `StartItUp` manually, no automagic involved. This is required in order to pass things to AppSettings. And later, I'd have to add some code to  read the settings from web.config.
