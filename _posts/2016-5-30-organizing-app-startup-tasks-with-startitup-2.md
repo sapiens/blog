@@ -6,7 +6,7 @@ category: .net
 
 Every time I start a new project I go through the same ritual: configure logging, setup DI Container, configure data mapper, service bus, event store etc. Ok, that's not really a problem, 'cause I don't do that every day, but I do need to change some of this stuff often enough to require a more organized approach. 
 
-For some time, I've had a small library that allowed me to organize the startup tasks into classes, but I needed a bit more flexibility: the ability to pass values/context between tasks without much ceremony. And this is how version 2 of `StartItUp` came to be. But let's see how it makes things easier.
+For some time, I've had a small library that allowed me to organize the startup tasks into classes, but I needed a bit more flexibility: the ability to pass values/context between tasks without much ceremony. And this is how version 2 of [StartItUp](https://github.com/sapiens/StartItUp) came to be. But let's see how it makes things easier.
 
 Well, here's a self explaining screenshot
 
