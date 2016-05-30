@@ -236,7 +236,7 @@ My current project is a Nancy app, so besides other stuff I do need to bootstrap
 ```
 When adding Nancy, we specify manually what bootstrapper to use and the bootstrapper will use our configuration object to return the Autofac instance when Nancy needs it. That wasn't that hard, was it?
 
- OK, now we have our tasks, we need one more thing:
+ OK, now we have our tasks, we need one more thing
  
  ```csharp 
   public class Startup
