@@ -238,8 +238,8 @@ When adding Nancy, we specify manually what bootstrapper to use and the bootstra
 
  OK, now we have our tasks, we need one more thing
  
- ```csharp 
-  public class Startup
+ ```csharp
+ public class Startup
     {
         public void Configuration(IAppBuilder app)
         {
