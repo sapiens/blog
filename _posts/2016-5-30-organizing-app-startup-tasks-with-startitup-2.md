@@ -247,8 +247,8 @@ When adding Nancy, we specify manually what bootstrapper to use and the bootstra
             StartIt.Up(new AppSettings(app));
         }
     }
- 
- ```
+    
+```
 
 Yep, you need to invoke `StartItUp` manually, no automagic involved. This is required in order to pass things to AppSettings. And later, I'd have to add some code to  read the settings from web.config.
 
