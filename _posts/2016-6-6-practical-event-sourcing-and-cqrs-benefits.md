@@ -6,7 +6,7 @@ category: Domain Driven Design
 
 If you're reading this post, you already know Event Sourcing (ES), but I want to look at things from a higher level point of view than usual. 
 
-## We have a more strategic, domain driven approach
+## We employ a more strategic, domain driven approach
 We know ES is about Domain Events. But a Domain Event is just a technical a way of saying **business state change**. Instead of being concerned with objects, data structures or db schemas, we're modelling things closer to how the business functionality is. We can't do proper ES if you don't _identify_ the relevant (from the business point of view) domain state changes, **the events** (sic) that are shaping the domain state and activity. Sure, you can design your Domain Events (you shouldn't!) and use the most technically correct ES with a nice Event Store and CQRS and messaging etc, but you'd be throwing away the strategic advantage which allows you to build maintainable apps. It's not about learning and applying a recipe, but adopting a certain mindset.     
 
 While the recipe part (implementation) is simple to learn, the first main benefit of ES is that we look at the domain as an always evolving event-driven system. 
