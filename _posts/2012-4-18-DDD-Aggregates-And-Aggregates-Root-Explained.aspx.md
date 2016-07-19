@@ -4,6 +4,8 @@ title: DDD - The Aggregate And Aggregate Root Explained
 category: Domain Driven Design
 ---
 
+**This post is obsolete** See [the updated version](http://blog.sapiensworks.com/post/2016/07/14/DDD-Aggregate-Decoded-1) 
+
 **The Aggregate**  
 This is simple. An aggregate is a group (a cluster) of objects that work together and are treated as a unit, to provide a specific functionality :) . An animal is an aggregate, it has internal organs, limbs etc. Everything works together to keep the animal alive and when we say animal, we imply everything the animal is made up from.  A car engine is also an aggregate, it contains lots of components, that can be aggregates too, which work together to achieve the engine functionality.
 
