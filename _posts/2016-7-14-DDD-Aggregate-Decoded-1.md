@@ -4,7 +4,7 @@ title: DDD Decoded - The Aggregate and Aggregate Root Explained (Part 1)
 category: Domain driven design
 ---
 
-For easy reading this topic is split in 3 parts: theory, example modelling and coding .
+For easy reading this topic is split in 3 parts: theory, [example modelling](http://blog.sapiensworks.com/post/2016/07/14/DDD-Aggregate-Decoded-2) and [coding (C#)](http://blog.sapiensworks.com/post/2016/07/14/DDD-Aggregate-Decoded-3) .
 
 A lot of actual and virtual ink has been used to explain this important DDD concept, but as Vaughn Vernon puts it "aggregates are one of the most important DDD patterns and one of the most misunderstood ones". That's because they are hard to explain, but once you've _really_ understood it, everything becomes easy and clear. But, first you have to accept the fact that [DDD is not about coding](http://blog.sapiensworks.com/post/2015/11/23/DDD-is-not-programming). Once you know that DDD is just a way to gather domain information and organize it in a technical (developer) friendly manner, you're ready to grok the Aggregate and its sibling _concept_, the Aggregate Root.   
 
@@ -72,7 +72,7 @@ In the beginning, DDD was very much mixed (coupled) with OOP. And that's why we 
 The name "Aggregate Root" make sense in an OOP approach where you have a group of objects and you want only one to be the "root", the facade representing the whole structure, however, in a more abstract manner, the role of the AR is simply to enforce the aggregate's business/consistency rules. So today, AR is a **role** that can be implemented by an object or just a function. If the aggregate means a group of components and rules, the AR is the "guardian" making sure we're dealing with the right components and the rules are respected. In our real life table example, the AR is the person assembling the table.  
 
 
-And that's the theory! Onward to a [modelling example]() 
+And that's the theory! Onward to a [modelling example](http://blog.sapiensworks.com/post/2016/07/14/DDD-Aggregate-Decoded-2).
  
 
 

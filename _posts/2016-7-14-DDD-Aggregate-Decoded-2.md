@@ -1,10 +1,10 @@
 ---
 layout: post
-title: DDD For Dummies - The Aggregate and Aggregate Root Explained (Part 2)
+title: DDD Decoded - The Aggregate and Aggregate Root Explained (Part 2)
 category: Domain driven design
 ---
 
-[Part 1]() was about the theory, now let's see an actual modelling example.
+[Part 1](http://blog.sapiensworks.com/post/2016/07/14/DDD-Aggregate-Decoded-1) was about the theory, now let's see an actual modelling example.
 
 To keep things simple, let's say we're building a banking app and we've identified this desired functionality: "A client can transfer money from one account to another". Let's see... are we changing the business state here? Yes, we do and the result of this operation is that the client's accounts will have different values. So, we need update both accounts: `account1.Add(value)` and `account2.Substract(value)` and case closed. Right? 
 
@@ -15,8 +15,9 @@ But before we continue, let's _identify_ the **change** itself: a new transfer t
 When modelling, the idea is to try to find out the change first i.e the result of the operation and then to identify all the details we need to end up with that change. At this point we have a couple of concepts,but is that all? Well, no... The domain expert tells us that each transfer should be identifiable (hint!) through a unique **number**, generated according a specific formula and that we need to know the date and time of creation. And the Debit and Credit must be of different accounts. 
  
 We have now enough information to determine our `Transfer` aggregate:
-- composition: `Transfer number`, `Credit`, `Debit`, `Creation date`
-- rules: All components are required. `Credit` and `Debit` target different accounts. 
+
+* composition: `Transfer number`, `Credit`, `Debit`, `Creation date`
+* rules: All components are required. `Credit` and `Debit` target different accounts. 
 
 But this is only the top-level view. We need to dig a bit deeper and to identify what each component means, we want to find out their models. `Transfer number` is a group of numbers and letters that must be unique and are determined according to a business formula. Basically a **value** respecting some constraints. 
 
@@ -29,7 +30,7 @@ Now, all these components, are **value objects** from DDD point of view, because
 
 We see here how we've identified the business concepts, rules and constraints required to make the change and how we've organized them into a group of named models. This is our aggregate, the relevant abstraction responsible for controlling the domain state change.
 
-You can have (readonly) fun with this model on [Domain Map](http://www.domain-map.rocks/sapiens#/blogagg/view/e44139e0-4646-4908-9053-28b1458c21b0/ac/4c8088e9-78dd-4304-95cc-265a7da6eb60) . Onward to [part 3: coding - C#]()
+You can have (readonly) fun with this model on [Domain Map](http://www.domain-map.rocks/sapiens#/blogagg/view/e44139e0-4646-4908-9053-28b1458c21b0/ac/4c8088e9-78dd-4304-95cc-265a7da6eb60) . Onward to [part 3: coding - C#](http://blog.sapiensworks.com/post/2016/07/14/DDD-Aggregate-Decoded-3)
 
  
 

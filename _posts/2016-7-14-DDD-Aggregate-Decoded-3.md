@@ -5,8 +5,9 @@ category: Domain driven design
 ---
 
 Read
-- [Part 1: Theory]() 
-- [Part 2: Modelling Example]()
+
+* [Part 1: Theory](http://blog.sapiensworks.com/post/2016/07/14/DDD-Aggregate-Decoded-1) 
+* [Part 2: Modelling Example](http://blog.sapiensworks.com/post/2016/07/14/DDD-Aggregate-Decoded-2)
 
 Coding time! I bet you've been waiting for this part for some time. Yes, once we have our model, it's time to write the code. Let's start with the Value Objects first.
 
@@ -73,6 +74,7 @@ public class TransferNumber
 ```
 
  Code should be self-explaining, although I bet you're wondering about 2 things:
+ 
  1. Why `TransferNumber` gets a Guid?
  2. Why there's no VO implementation for the creation date?
 
