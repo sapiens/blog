@@ -4,8 +4,6 @@ title: DDD Decoded - The Aggregate and Aggregate Root Explained (Part 3)
 category: Domain driven design
 ---
 
-Read
-
 * [Part 1: Theory](http://blog.sapiensworks.com/post/2016/07/14/DDD-Aggregate-Decoded-1) 
 * [Part 2: Modelling Example](http://blog.sapiensworks.com/post/2016/07/14/DDD-Aggregate-Decoded-2)
 
@@ -74,7 +72,7 @@ public class TransferNumber
 ```
 
  Code should be self-explaining, although I bet you're wondering about 2 things:
- 
+
  1. Why `TransferNumber` gets a Guid?
  2. Why there's no VO implementation for the creation date?
 
