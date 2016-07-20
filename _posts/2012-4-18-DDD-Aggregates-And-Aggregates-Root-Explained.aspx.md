@@ -1,7 +1,9 @@
 ---
 layout: post
+sitemap: false
 title: DDD - The Aggregate And Aggregate Root Explained
 category: Domain Driven Design
+redirect_to: http://blog.sapiensworks.com/post/2016/07/14/DDD-Aggregate-Decoded-1
 ---
 
 **This post is obsolete** See [the updated version](http://blog.sapiensworks.com/post/2016/07/14/DDD-Aggregate-Decoded-1) 
