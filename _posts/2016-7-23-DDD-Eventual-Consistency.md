@@ -16,9 +16,9 @@ John and Mary withdraw together 200$, from an account which only has 100$. When 
 
  As we can see, Eventual Consistency exists without computers or CQRS. Like rain, it's a normal phenomenon in the real world. And businesses exist in the real world, so for them EC is just normality, even if a domain expert doesn't know what the words "Eventual Consistency" mean. And being normality, the business has a solution for this problem.
 
- As programmers, we are _trained_ , almost indoctrinated to pray to the ACID god. We feel fragile if 2 changes aren't wrapped in a transaction and EC is like a the boogie man, we fear it and try to avoid it. But this is just the CRUD mindset, a one trick pony that doesn't reflect a moderately complex domain.
+ As programmers, we are _trained_ , almost indoctrinated to pray to the ACID god. We feel fragile if 2 changes aren't wrapped in a transaction and EC is like the boogie man, we fear it and try to avoid it. But this is just the CRUD mindset, a one trick pony that doesn't reflect a moderately complex domain.
 
- DDD is about changing our mindset from CRUD, data driven to business driven. And the funny thing is, not only that EC is pretty normal but it's the default. Remember that we try to _identify aggregates_ i.e we're actively looking for areas, islands that need to be **immediately consistent** in an ocean of eventual consistency. Those are not in-your-face visible, we have to carefully 'hunt' them, in a way proving that only in those cases we need a unit of work.
+ DDD is about changing our mindset from CRUD, data driven to business driven. And the funny thing is, not only that EC is pretty normal but it's the default,too. Remember that we try to _identify aggregates_ i.e we're actively looking for areas, islands that need to be **immediately consistent** in an ocean of eventual consistency. Those are not in-your-face visible, we have to carefully 'hunt' them, in a way proving that only in those cases we need a unit of work.
 
  And maybe that's one of the biggest things with DDD, the revelation that a model doesn't really need to always be immediately consistent, like in the CRUD approach; some parts need it, others don't. Our objective is to identify which needs what.
 
