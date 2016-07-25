@@ -83,6 +83,16 @@ margin-bottom:4rem;
 		font-size:$fontSize*.75;
 	}
 }
+
+aside .apps{
+  margin-top: 1rem;
+  text-align: center;
+  font-family: "Helvetica Neue";
+background-color: #FFD7B6;
+border-radius: 4px;
+padding: 1rem;
+}
+
 aside h2 {
      background-color: $topicBg;
    border-bottom: 1px solid #09359b;
