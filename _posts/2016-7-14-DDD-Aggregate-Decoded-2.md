@@ -26,7 +26,7 @@ But this is only the top-level view. We need to dig a bit deeper and to identify
 `Credit`is similar to `Debit` only the name is different, but that's enough to be treated as a separated concept which just happens to have the same composition.
 `Creation date` is just a simple datetime value.
 
-Now, all these components, are **value objects** from DDD point of view, because each represents a value with a business meaning and unlike a `Transfer` they don't need to have an explicit component that acts as an identifier. Their value is their identity.  
+Now, all these components, are **[value objects](http://blog.sapiensworks.com/post/2016/07/29/DDD-Entities-Value-Objects-Explained)** from DDD point of view, because each represents a value with a business meaning and unlike a `Transfer` they don't need to have an explicit component that acts as an identifier. Their value is their identity.  
 
 We see here how we've identified the business concepts, rules and constraints required to make the change and how we've organized them into a group of named models. This is our aggregate, the relevant abstraction responsible for controlling the domain state change.
 
