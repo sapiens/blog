@@ -44,7 +44,7 @@ Sometimes is tricky to identify the nature of a concept, it might look like an e
 
 These hints make it easy for us to implement a VO and personally I go for an object with business rules enforced in the constructor plus getters. We can have methods but those methods should never change the VO, you can only create new VOs.
 
-In some cases, the VO implementation can be just a simple enum (think OrderStatus: Pending|InProgress|Completed), no need to complicate our life.
+In some cases, the VO implementation can be just a simple enum (think OrderStatus: Pending | InProgress | Completed), no need to complicate our life.
 
 
 # When CQRS is involved
