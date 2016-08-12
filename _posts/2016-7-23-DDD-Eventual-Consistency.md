@@ -1,7 +1,7 @@
 ---
 layout: post
 title: DDD Decoded - Don't Fear Eventual Consistency
-category: Domain driven design
+category: DDD Decoded
 ---
 
 Inevitably when talking DDD, someone asks: "It's all great with those aggregates, events and stuff, but how do I query things?". Inevitably, the answer is:"Use CQRS" and inevitably, a new issue appears: "You have to account for Eventual Consistency (EC)", a necessary evil.

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: DDD Decoded - Entities and Value Objects Explained
-category: Domain driven design
+category: DDD Decoded
 ---
 
 One of the staples of DDD _mindset_ is the partitioning of **business concepts** into: _Entities_ and _Value Objects_ . Notice, that I've said _concepts_ not objects. The difference is that an object _might be_ an implementation of a model of a concept. It's not about how we write code, it's about how we 'label' a business aspect, in a more developer friendly manner.

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: DDD Decoded - The Aggregate and Aggregate Root Explained (Part 1)
-category: Domain driven design
+category: DDD Decoded
 ---
 
 For easy reading this topic is split in 3 parts: theory, [example modelling](http://blog.sapiensworks.com/post/2016/07/14/DDD-Aggregate-Decoded-2) and [coding (C#)](http://blog.sapiensworks.com/post/2016/07/14/DDD-Aggregate-Decoded-3) .

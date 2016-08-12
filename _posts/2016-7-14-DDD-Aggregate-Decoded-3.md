@@ -1,7 +1,7 @@
 ---
 layout: post
 title: DDD Decoded - The Aggregate and Aggregate Root Explained (Part 3)
-category: Domain driven design
+category: DDD Decoded
 ---
 
 * [Part 1: Theory](http://blog.sapiensworks.com/post/2016/07/14/DDD-Aggregate-Decoded-1) 
