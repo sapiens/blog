@@ -4,7 +4,7 @@ title: DDD Decoded - Domain Relationships Explained
 category: DDD Decoded
 ---
 
-One of the most trickiest things to understand in DDD is the domain relationship between 2 concepts. Most of the time when people think relationship they use the programmer mindset and they look for: `has-a` or `is-a` or `parent-child` or (worse) `one-to-many` etc  relationships. Which valid when you write code but **absolutely wrong** when you do domain modelling.
+One of the most trickiest things to understand in DDD is the domain relationship between 2 concepts. Most of the time when people think relationship they use the programmer mindset and they look for: `has-a` or `is-a` or `parent-child` or (worse) `one-to-many` etc  relationships. Which is valid when you write code but **absolutely wrong** when you do domain modelling.
 
 What we're looking for is a **Domain Relationship** i.e how the Domain sees the relationship from a business point of view or, to be more precise, what is the level of association/partnership between the concepts and what business rules are involved in maintaining the relationship. And usually there are 2 types: **strong/always** and **weak/optional**.
 
