@@ -36,7 +36,7 @@ An interesting example is deleting something. If I soft delete a post, what I ha
 
 Another example can be "Pay invoice". Yet again, a relationship between an Entity (`Invoice`) and a Value Object (`InvoiceStatus`) . The status is metadata for the invoice and we need a relationship aggregate to change the status. From the domain point of view, something associated with the Invoice entity has changed. 
 
-#Conclusion
+# Conclusion
 
 The hardest part about domain relationships is to properly identify them; many times, especially when an Entity and a Value Object are involved, we can think that the VO is part of the Entity's aggregate, when in fact it's a relationship that might need its own aggregate. But with more practice, spotting relationships will become second nature.  
  
