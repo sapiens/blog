@@ -1,0 +1,27 @@
+---
+layout: default
+---
+
+<article class="post">
+  <h1>{{ page.title }}</h1>
+
+  <div class="entry">
+    <p>
+      This tutorial is an excerpt of the <i>actual</i> DDD modelling process of <a href="http://www.getvpp.com/">Value++</a>  
+      using <a href="http://www.domain-map.rocks/">Domain Map</a>.       
+    </p>
+    {{ content }}
+  </div>
+<footer>
+  <span class="date">
+    Written by <i>Mike</i> on {{ page.date | date: "%e %B %Y" }}
+  </span>
+    {% if page.category %}
+      |   Topic: <a href="{{site.baseurl | prepend: site.url}}/topics/#{{ page.category | slugify}}">{{ page.category }}</a> 
+    {% endif %}
+</footer>
+  
+</article>
+<section id="comments">
+  {% include disqus.html %}
+  </section>
