@@ -4,7 +4,7 @@ title: DDD Tutorial - Modelling "Create Organization"
 category: Domain Map Tutorials
 ---
 
-# Business Case: Create Organization
+# Business functionality: Create Organization
 
 We want to create an organization, similar to what GitHub has. An organization is a group of members who can participate in the organization's projects. Organization name must be unique, at most 50 characters length. An organization should have at least 1 member in admin role. A user can be part of any number of organizations.
  
