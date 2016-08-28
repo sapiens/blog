@@ -1,8 +1,10 @@
 ---
-layout: dmap
+layout: post
 title: DDD Tutorial - Modelling "Create Organization"   
 category: Domain Map Tutorials
 ---
+
+This tutorial is an excerpt of the _actual_ DDD modelling process of [Value++](http://www.getvpp.com/) (Agile project management software) using [Domain Map](http://www.domain-map.rocks/).         
 
 # Business functionality: Create Organization
 
