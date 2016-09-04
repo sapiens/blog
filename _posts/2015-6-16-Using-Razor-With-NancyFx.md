@@ -12,7 +12,7 @@ After using Nancy to build an Api app, I've decided to give it a try and use it 
 
  Here's an example
 
- ```csharp
+```csharp
  public class RazorConfig : IRazorConfiguration
    {
        public IEnumerable<string> GetAssemblyNames()
@@ -51,7 +51,7 @@ After using Nancy to build an Api app, I've decided to give it a try and use it 
 
  Here's an example
 
- ```csharp
+```csharp
  //in my nancy bootstrapper
 protected override void ConfigureConventions(NancyConventions nancyConventions)
        {
@@ -89,7 +89,7 @@ protected override void ConfigureConventions(NancyConventions nancyConventions)
 
  Here's an example of a 'register user' form
 
- ```html
+```html
  <form action="/register" method="POST">
 
     @Html.HiddenTag(d=>d.OperationId).Raw()
@@ -121,7 +121,7 @@ protected override void ConfigureConventions(NancyConventions nancyConventions)
 
  All the helpers are defined by me, they just provide a simple way to use HtmlTags in a Razor view. Here's a small excerpt
 
- ```csharp
+```csharp
       public static TextboxTag Textbox<T>(this HtmlHelpers<T> html,Expression<Func<T,object>> valueSelector)
        {
            var name = valueSelector.GetName();
