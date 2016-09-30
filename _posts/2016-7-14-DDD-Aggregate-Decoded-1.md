@@ -44,7 +44,7 @@ An aggregate defines consistency boundaries, that is, everything inside it needs
 
 But we don't actually _design_ things to be in a consistent manner; the fact that we have all those components and rules **together** tells us that we're dealing with a group acting as a single unit that needs to always be consistent. This is how we know we've _found_ an aggregate.
 
-We can say that we can identify an aggregate either starting from a 'big' concept and understand its (busines) composition, or by noticing related concepts and rules that together define an area that needs to be always consistent. Either way, we end up with an aggregate.  
+We can say that we can identify an aggregate either starting from a 'big' concept and understand its (business) composition, or by noticing related concepts and rules that together define an area that needs to be always consistent. Either way, we end up with an aggregate.  
 
 A somewhat interesting situation is when we deal with domain relationships, in some cases we need to identify an aggregate for them too. But that's a topic for another post.
 
