@@ -107,7 +107,7 @@ A nice, flattened data structure, containing _valid_ data. Valid, because it's t
             debit.MustNotBeNull();
             credit.MustNotBeNull();
 
-            debit.Account.MustBe(credit.Account);
+            debit.Account.MustNotBe(credit.Account);
 
             var ev=new TransferedRegistered();
             ev.EntityId = number.EntityId;
