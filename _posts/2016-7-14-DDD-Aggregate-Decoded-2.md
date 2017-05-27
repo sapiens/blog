@@ -30,7 +30,7 @@ Now, all these components, are **[value objects](http://blog.sapiensworks.com/po
 
 We see here how we've identified the business concepts, rules and constraints required to make the change and how we've organized them into a group of named models. This is our aggregate, the relevant abstraction responsible for controlling the domain state change.
 
-You can have (readonly) fun with this model on [Domain Map](http://www.domain-map.rocks/sapiens#/blogagg/view/e44139e0-4646-4908-9053-28b1458c21b0/ac/4c8088e9-78dd-4304-95cc-265a7da6eb60) . Onward to [part 3: coding - C#](http://blog.sapiensworks.com/post/2016/07/14/DDD-Aggregate-Decoded-3)
+ Onward to [part 3: coding - C#](http://blog.sapiensworks.com/post/2016/07/14/DDD-Aggregate-Decoded-3)
 
  
 
