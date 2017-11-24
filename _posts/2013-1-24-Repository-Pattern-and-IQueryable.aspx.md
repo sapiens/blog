@@ -8,7 +8,7 @@ Many developers are defining a repository interface with at least a method which
 
  First aspect is that having a method returning a IQueryable is a case of [leaky abstraction](http://stackoverflow.com/questions/3883006/meaning-of-leaky-abstraction). But you can counter that by saying that IQueryable is part of BCL and Linq is part of C# . Fair enough!
 
- However the mistake is not the IQueryable itself, but its purpose. An IQueryable is codetty much a query builder and it's great for that. A repository method returns some business object (model). Can you spot the difference? You ask the repository to give you a model. How the repository comes up with the model is its problem.
+ However the mistake is not the IQueryable itself, but its purpose. An IQueryable is pretty much a query builder and it's great for that. A repository method returns some business object (model). Can you spot the difference? You ask the repository to give you a model. How the repository comes up with the model is its problem.
 
  The point is that using IQueryable, you're asking for a query builder and not for a model. A query builder specifies how the query should be, **how** to get the data. Then why are we using a repository? Isn't the repo's job to know how to get the thing we want? We're using the repository because we want to specify **what** to get, not **how** to get it.
 

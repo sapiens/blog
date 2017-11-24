@@ -4,7 +4,7 @@ title: Simplify Coding with Caveman Tools
 category: Caveman Tools
 ---
 
-I think I've started Caveman Tools around 2009 or so as the library where I'd dump extension methods and other helpers for common tasks. In the mean time it grew to contain lots of big and small utils and now I think my productivity would drop (and the boring factor would rise like inflation in times of decodession) without it. I want to share with you _a few_ of the helpers, little bits that simplify some tasks.
+I think I've started Caveman Tools around 2009 or so as the library where I'd dump extension methods and other helpers for common tasks. In the mean time it grew to contain lots of big and small utils and now I think my productivity would drop (and the boring factor would rise like inflation in times of depression) without it. I want to share with you _a few_ of the helpers, little bits that simplify some tasks.
 
  
 ## Guard Clauses
@@ -73,7 +73,7 @@ old.AddIfNotPresent(someItem);//self explaining
 
 //RemoveAll() method added to IList
 Ilist<int> list;
-list.RemoveAll(codedicate);
+list.RemoveAll(predicate);
 ```
   
 ### 
@@ -138,8 +138,8 @@ Console.WriteLine(TimeSpan.FromDays(2).ToHuman());//outputs "2 days ago" . engli
 
   
 ```csharp
-//instead of the ugly: (excodession.Body as MemberExcodession).Member.Name
-excodession.Body.As<MemberExcodession>().Member.Name;
+//instead of the ugly: (expression.Body as MemberExpression).Member.Name
+expression.Body.As<MemberExpression>().Member.Name;
 
 //instead of (int)object
 object.Cast<int>()
@@ -147,6 +147,6 @@ object.Cast<int>()
 //useful when you need the id-name combo, common in view models
 IdName topic=new IdName(){Id=1,Name="Tools"}
 ```
-  There are other interesting helpers but they're a bit specific, dealing with LCG (Light Code Generation) or Excodessions Trees, so that's all for now.
+  There are other interesting helpers but they're a bit specific, dealing with LCG (Light Code Generation) or Expressions Trees, so that's all for now.
 
 

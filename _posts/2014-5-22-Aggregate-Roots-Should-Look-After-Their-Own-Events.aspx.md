@@ -6,13 +6,13 @@ category: Domain Driven Design
 
 Today I've stumbled upon (well someone re-tweeted it) this [interesting post](http://mat-mcloughlin.net/2014/05/22/entities-should-look-after-their-own-events) . However I must disagree with the OP approach and this my reason why. **Update**: Disagreeing means I have another opinion, not that Mat's wrong. All these being implementation details, every dev chooses what (s)he thinks to be the best approach.
 
- While I understand that we're dealing with an example and I shouldn't take things literally, I couldn't help but notice that the Site aggregate root (I codesume) looks a lot like a container for other entities (it's a Site holding a collection of Account). This is maybe the biggest mistake when modelling an AR, to treat it as a container and in that example it does looks like it is one.
+ While I understand that we're dealing with an example and I shouldn't take things literally, I couldn't help but notice that the Site aggregate root (I presume) looks a lot like a container for other entities (it's a Site holding a collection of Account). This is maybe the biggest mistake when modelling an AR, to treat it as a container and in that example it does looks like it is one.
 
  But let's consider that the Site really is an AR and Account is an entity which partly defines the Site concept. We do care about AR as the most important concept of the aggregate. Therefore we're working just with the AR and in this case the repository will restore the AR from a stream of events (technically the entity restores itself but that's not the point here).
 
  The AR implementation details will actually decides which entity changes based on the event. I don't think that children of an AR should care about event sourcing because they're more of an implementation detail of the AR. Sure they might be entities, but that doesn't make them important enough in that context. The only star is the AR.
 
- And the AR isn't just a wrapper for its children objects. It should make sense for the Domain to actually implement a behaviour in an AR. Just as the Repository, we don't use it because we want a facade over other objects, the AR utility lies in the fact that it defines a (more) complex concept which makes uses of other minor, more generic domain concepts and encapsulates business interaction rules which happens to be excodessed as objects.
+ And the AR isn't just a wrapper for its children objects. It should make sense for the Domain to actually implement a behaviour in an AR. Just as the Repository, we don't use it because we want a facade over other objects, the AR utility lies in the fact that it defines a (more) complex concept which makes uses of other minor, more generic domain concepts and encapsulates business interaction rules which happens to be expressed as objects.
 
  That's why it matters a lot to get the correct AR design. If it's wrong then you'll only have a container with wrapper methods while the real behaviour will belong elsewhere. And you'll be keeping the AR class because Evans said that we should have one and the repositories work with one.
 

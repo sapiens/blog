@@ -93,7 +93,7 @@ public interface IViewFactory
 
  The main idea is that for a given view it processes all the conventions and uses the first which returns a valid view path. It then uses that path to search for a view factory which can handle the file extension. After that it asks the factory to create a **IView** instance which is returned via the **ViewEngineResult** object.
 
- If a returned view path isn't valid, it's added to a list of searched paths. If no conventions returned a valid path or there are no view factories which can handle it, an 'error' **ViewEngineResult** is returned containing the list of searched paths. That's all, codetty easy.
+ If a returned view path isn't valid, it's added to a list of searched paths. If no conventions returned a valid path or there are no view factories which can handle it, an 'error' **ViewEngineResult** is returned containing the list of searched paths. That's all, pretty easy.
 
  And once the view engine is built along with some conventions and view factories, just hook it up
 

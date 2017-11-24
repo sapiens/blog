@@ -14,21 +14,21 @@ Reading that [The Anaemic Domain Model is no Anti-Pattern, it’s a SOLID design
 >  
  Yes, but it's about business rules that the concept needs in order to be valid. It's not about the business rules required by a use case. Those are treated at the use case level, that is the Application (Services) Layer which isn't that thin anymore. As an example of a rule that should be enforced by a domain concept, an order should not accept quantities or prices lower than 0 (well, to be more exact the Price object used by the Order shouldn't allow values < 0).
 
- Next, I simply can't agree with the rich domain example codesented by the author. ActiveRecord pattern shouldn't be used in a rich domain context. Ever! You want to keep things decoupled so, no way a proper business object should contain db access code. The example is simply flawed. A DomainEntity base class containing CRUD methods is something belonging to persistence (ORM entity), a real domain base class doesn't care about database, even less about CRUD.
+ Next, I simply can't agree with the rich domain example presented by the author. ActiveRecord pattern shouldn't be used in a rich domain context. Ever! You want to keep things decoupled so, no way a proper business object should contain db access code. The example is simply flawed. A DomainEntity base class containing CRUD methods is something belonging to persistence (ORM entity), a real domain base class doesn't care about database, even less about CRUD.
 
  
-> "A proponent of the RDM architecture might claim that the hypothetical example provided is not recodesentative of an true RDM. It might be suggested that a well implemented Rich Domain Model would not mix persistence concerns with the domain entity, instead using Data Transfer Objects (DTO’s) [18, 17] to interface with the persistence layer."
+> "A proponent of the RDM architecture might claim that the hypothetical example provided is not representative of an true RDM. It might be suggested that a well implemented Rich Domain Model would not mix persistence concerns with the domain entity, instead using Data Transfer Objects (DTO’s) [18, 17] to interface with the persistence layer."
 > 
 >  
  Actually, it will use a repository. The DTOs might work for querying purposes but that's it.
 
- The anaemic domain example codesented looks codetty SOLID if not a bit over engineered. However, that's a use case that's using the domain concepts. I get the feeling people think that rich domain object have to be big, complex objects with 20 public methods and 17 children and even more private methods. The richness of a domain stems from the number and complexity of concepts(with relevant behaviour) and use cases (business rules, business flows), it's not about fat objects.
+ The anaemic domain example presented looks pretty SOLID if not a bit over engineered. However, that's a use case that's using the domain concepts. I get the feeling people think that rich domain object have to be big, complex objects with 20 public methods and 17 children and even more private methods. The richness of a domain stems from the number and complexity of concepts(with relevant behaviour) and use cases (business rules, business flows), it's not about fat objects.
 
  
 > "As the hypothetical RDM is refactored to apply the SOLID principles, more granular domain entities could be broken out; the Customer domain entity might be split into CustomerPurchase and CustomerRefund domain models. However, these new domain models may still depend on atomic domain rules which may change independently without otherwise affecting the domain entity, and might be depended on by multiple domain entities; to avoid duplication and coupling, these domain rules could then be further factored out into their own modules and accessed via an abstract interface. The result is that as the hypothetical RDM is refactored to apply the SOLID principles, the architecture tends towards the ADM! "
 > 
 >  
- No it doesn't! CustomerPurchase and CustomerRefund are use cases of the Customer concept (entity). If another bounded context sees the Customer a bit differently(structure or behaviour), then we're talking about a different concept (the model is valid only within the context boundaries, it shouldn't be reused under the codetext of DRY).
+ No it doesn't! CustomerPurchase and CustomerRefund are use cases of the Customer concept (entity). If another bounded context sees the Customer a bit differently(structure or behaviour), then we're talking about a different concept (the model is valid only within the context boundaries, it shouldn't be reused under the pretext of DRY).
 
  Concepts interact with other concepts (behaviour) according to the use case. The behaviour is a part of the concept and cares only about the concept's limited subdomain. And that behaviour certainly isn't related to persistence or UI widgets or even other bounded context (outside the concept's context). You can say an use case encapsulates how a concept 'works' with other concepts given a certain context. But that **behaviour is intrinsic to the domain object**, the use case just uses it.
 

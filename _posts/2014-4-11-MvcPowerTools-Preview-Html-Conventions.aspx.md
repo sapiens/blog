@@ -6,7 +6,7 @@ category: MvcPowerTools
 
 The moment we'll all be waiting for. Well, at least I was... I know this is (was) a Fubu feature that people used with asp.net mvc, but it was simply hat a developer extracted from Fubu then glued with the asp.net mvc. Html Conventions in [MvcPowerTools (MvcPT)](https://github.com/sapiens/MvcPowerTools) are a first class citizen, deeply integrated with Asp.Net Mvc. So, now you can use HtmlConventions like in Fubu (well the syntax resemble but it's not 100% identical) as a 'native' asp.net mvc feature.
 
- If you don't know what's the deal with html conventions, let me make you a very short codesentation. .Net Mvc templated helpers are great but they're a bit cumbersome if you just want something more of a widget, a mini-template that can be customized in more than 1 step. And sadly the mvc's behaviour is an all or nothing affair: you either use display templates for all properties in your model and you get away with _Html.EditorForModel_ or you have to write manually for every property _Html.EditorFor(m=>m.Property)_ just to have control for one property you want to be rendered differently.
+ If you don't know what's the deal with html conventions, let me make you a very short presentation. .Net Mvc templated helpers are great but they're a bit cumbersome if you just want something more of a widget, a mini-template that can be customized in more than 1 step. And sadly the mvc's behaviour is an all or nothing affair: you either use display templates for all properties in your model and you get away with _Html.EditorForModel_ or you have to write manually for every property _Html.EditorFor(m=>m.Property)_ just to have control for one property you want to be rendered differently.
 
  The point of html conventions is to define html rendering 'rules' that will apply to all model matching a criteria. This means you can make bulk changes just changing a few lines of code in a convention. As I've said before, it works at a **widget** level. It's possible but not recommended to generate ALL the html via conventions. Among the best use cases are form fields (input controls). If you're dealing with many forms and fields, html conventions are a productivity saver. Add/change a convention and all targeted controls are automatically updated. A note about testing, the deep integration with asp.net mvc is both a blessing and a curse, in order to test the conventions you have to mock at least ViewContext (which requires a ControllerContext and so on). For now it's like this, maybe in a future version I can avoid this tight coupling (I wonder if 'integrated' and 'decoupled' are compatible).
 
@@ -88,18 +88,18 @@ App_Start - Html - Display - Build.cs
     {
         public static void Run()
         {
-			//codedefined modifiers which mimic default asp.net mvc templating behaviour
+			//predefined modifiers which mimic default asp.net mvc templating behaviour
 			HtmlConventionsManager.LoadModule(new DataAnnotationModifiers(), new CommonEditorModifiers(), new SemanticModifiers(), new CommonDisplayModifiers());
 					
 			//load all conventions defined in the assembly
 			HtmlConventionsManager.LoadModules(typeof (ConfigTask_HtmlConventions).Assembly);
 			
-			//codedefined builders for use with model annotations
+			//predefined builders for use with model annotations
 			HtmlConventionsManager.LoadModule(new DataAnnotationBuilders(),new CommonHtmlBuilders());            
 		}
 	}
 ```
-  While it looks a bit scary, it's codetty simple. We check that the model is a property and the parent or the property has [NgModel] and if that's the case, we modify the supplied HtmlTag: get the input element then add the ng-model attribute with the property name (made to be angularjs compatible). Then we handle some edge cases (these come out after you're using the app). In the end, we make sure that the hidden fields are updated, by adding the [_update-hidden_](http://www.sapiensworks.com/blog/post/2013/06/22/Binding-AngularJs-Model-to-Hidden-Fields.aspx) directive.
+  While it looks a bit scary, it's pretty simple. We check that the model is a property and the parent or the property has [NgModel] and if that's the case, we modify the supplied HtmlTag: get the input element then add the ng-model attribute with the property name (made to be angularjs compatible). Then we handle some edge cases (these come out after you're using the app). In the end, we make sure that the hidden fields are updated, by adding the [_update-hidden_](http://www.sapiensworks.com/blog/post/2013/06/22/Binding-AngularJs-Model-to-Hidden-Fields.aspx) directive.
 
  In the view the code looks like this
 
@@ -184,6 +184,6 @@ d.ForType<DateTime>()
 ```
   The cool thing here is that you don't need to create a partial (template) view for List<Bla> just to be able to use the templated html helpers.
 
- Whoa, that's a long post already and I've only scratched the surface of what you can do with html conventions. It's a codetty big and complex feature but it can give you a LOT of power and flexibility when building your views. To give you an idea, you have support for html conventions profiles that can be changed on every request and you can define your own conventions registries besides Editor, Displays or Label (but you need to implement your own html helpers for those).
+ Whoa, that's a long post already and I've only scratched the surface of what you can do with html conventions. It's a pretty big and complex feature but it can give you a LOT of power and flexibility when building your views. To give you an idea, you have support for html conventions profiles that can be changed on every request and you can define your own conventions registries besides Editor, Displays or Label (but you need to implement your own html helpers for those).
 
 

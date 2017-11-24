@@ -4,7 +4,7 @@ title:  The Secret Of Maintainable Code
 category: Business
 ---
 
-A very long time ago, before recorded history, there was a tribe of cave(wo)men. In order to survive, each worked as they could trying to do their best. But the problem was they codetty much acted on their own, in a chaotic way, without a plan or leadership. Their work was chaotic and some chores, like hunting was a really (sometimes literally) PITA.
+A very long time ago, before recorded history, there was a tribe of cave(wo)men. In order to survive, each worked as they could trying to do their best. But the problem was they pretty much acted on their own, in a chaotic way, without a plan or leadership. Their work was chaotic and some chores, like hunting was a really (sometimes literally) PITA.
 
  A smart man (it was a patriarchal system, they didn't listen to women) realised that they need to organise themselves, have a plan and a leader who will manage the group to reach the proposed objective. The group was split in smaller groups called teams and each team member had a specific role to fulfill.
 

@@ -8,7 +8,7 @@ MvcPowerTools (MPT) is a library aimed at the **experienced** asp.net mvc develo
 
  Today's post is about _Routing Conventions_. More exactly, MPT allows you to define your very own routing conventions. One thing to note is that it doesn't replace the standard conventions, you can use both the 'old' style and conventions at the same time, because all the conventions do is to allow you to define how the routes are generated for controllers matching a criteria. Once again, it's a way to extend what asp.net mvc already offers.
 
- So, you may not like to write all your routing by hand (for obvious reasons). Or you might want to use a certain routing approach for some controllers, some attribute base routing for others, namespace based hierarchy for some etc. Of course, you can do all this right now, but ... what if you need to change your routes based on the SEO flavour of the day or to accommodate internationalization  or versioning or.. you get the picture. Would you codefer to do it by hand, changing God knows how many routes or modifying tens or hundreds of controllers or you codefer to change a convention in ONE place and that's it?
+ So, you may not like to write all your routing by hand (for obvious reasons). Or you might want to use a certain routing approach for some controllers, some attribute base routing for others, namespace based hierarchy for some etc. Of course, you can do all this right now, but ... what if you need to change your routes based on the SEO flavour of the day or to accommodate internationalization  or versioning or.. you get the picture. Would you prefer to do it by hand, changing God knows how many routes or modifying tens or hundreds of controllers or you prefer to change a convention in ONE place and that's it?
 
  The point with routing conventions is that allows you to decouple the route generation from the controllers in a very maintainable manner. You can have as many conventions you need for all the edge cases. You don't have to force everything into a one way of doing things.
 
@@ -90,7 +90,7 @@ cfg.Always().Modify((r, action) =>
 ```
   Now everytime I want to change something, I change it here. Anything else stays untouched. Btw, the register controllers part is required.  While this is only an example, you can create much more specific conventions each in its own class (SRP!).
 
- MPT comes with 2 codedefined conventions: **[HandlerRouteConvention](http://lostechies.com/josharnold/2011/07/26/handlers-a-useful-fubumvc-convention/) ** and **OneModelInHandlerConvention**. Personally, I codefer the latter one as it's easier to maintain.
+ MPT comes with 2 predefined conventions: **[HandlerRouteConvention](http://lostechies.com/josharnold/2011/07/26/handlers-a-useful-fubumvc-convention/) ** and **OneModelInHandlerConvention**. Personally, I prefer the latter one as it's easier to maintain.
 
  OK, thats' it for now, but here's a taste of things to come: view engine conventions, html conventions, apply filters by conventions, command and query controllers. In the mean time you can check the [GitHub repo](https://github.com/sapiens/MvcPowerTools)
 

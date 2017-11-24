@@ -25,7 +25,7 @@ public interface IRepository<T>
    
  What I'm trying to say is that the design of a repository interface depends too much on what bounded context it applies for, so there isn't a generic form. If you find that things are repeating it might be a sign of poor architecture or that specific application is really suitable for something generic. But that's a specific case, not the rule.  
    
- Other offender in regard to generic repositories is the fact that lots of developers just use it to wrap the DAO (Database Access Object) or an underlying ORM (like EF or Nhibernate). Doing so they add only a useless abstraction, codetty much just making the code more complex with no benefits. A DAO makes it easy to work with a database, an ORM makes it easy to access a database as an OOP virtual storage and to eventually abstract the access to a specific database.   
+ Other offender in regard to generic repositories is the fact that lots of developers just use it to wrap the DAO (Database Access Object) or an underlying ORM (like EF or Nhibernate). Doing so they add only a useless abstraction, pretty much just making the code more complex with no benefits. A DAO makes it easy to work with a database, an ORM makes it easy to access a database as an OOP virtual storage and to eventually abstract the access to a specific database.   
    
  But the repository should abstract the whole persistence layer, hiding implementation details like database engine or what DAO or ORM the app is using but also providing a contract that makes sense from the application point of view. The repository serves the application needs, NOT the database needs.  
    

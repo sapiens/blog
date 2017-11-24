@@ -6,7 +6,7 @@ category: Domain Driven Design
 
 One of the most trickiest but important thing when domain (OOP) modelling is to properly identify the entity's behaviours and use cases. But in many cases what seems a behaviour is actually a use case. It's quite easy to fall into the trap if you're not taking enough time to understand the domain.
 
- Picture a mobile phone, a 'dumb' one. To call someone you just type the number and codess the 'Call' button. In code it looks like this
+ Picture a mobile phone, a 'dumb' one. To call someone you just type the number and press the 'Call' button. In code it looks like this
 
   
 ```csharp
@@ -23,7 +23,7 @@ var dialer=phone.StartApp<Phone>();
  dialer.Call(""some number);
  dialer.EndCall();
 ```
-  Well, things changed... Calling someone is no longer a phone behaviour, it's a phone use case. Starting an app is the phone behaviour, while calling becomes the Phone app behaviour. With a smartphone, codetty much everything is an app. What the phone does now is run apps. All you can do is tap the screen and codess the hard buttons which act as a controller sending some signals to the OS or the running app. But all the actual behaviour you want from the phone belongs to its apps. The phone is just the platform now, the most used behaviours are: tap and charge the battery.
+  Well, things changed... Calling someone is no longer a phone behaviour, it's a phone use case. Starting an app is the phone behaviour, while calling becomes the Phone app behaviour. With a smartphone, pretty much everything is an app. What the phone does now is run apps. All you can do is tap the screen and press the hard buttons which act as a controller sending some signals to the OS or the running app. But all the actual behaviour you want from the phone belongs to its apps. The phone is just the platform now, the most used behaviours are: tap and charge the battery.
 
   
 ```csharp
@@ -40,9 +40,9 @@ public void Charge(Charger charger)
 
  Let's consider an (e-commerce) Order and an Invoice. Is the creation of an invoice a behaviour of the Order? After all, it has the data the invoice needs. But it's not an Order behaviour, because the concept of an Order is basically a 'document' detailing what a customer wants to buy from you. An invoice is another document which uses some data from the Order but also other data (discounts rules based on volume or customer status). An Invoice generation is a use case of the Order.
 
- How about tracking the Order's fulfilment? We need to know what products are ready, what needs to be ordered from the supplier etc. All these together form another use case of the Order. How about the Order status (Pending, InProgress,ReadyToShip, Shipped,Delivered etc)? Does this belongs to an Order? It doesn't. The tracking of the Order's state isn't part of the Order concept. We're using additional data and behaviour to recodesent different use cases which are useful for the business and for the customer but which don't define the Order concept.
+ How about tracking the Order's fulfilment? We need to know what products are ready, what needs to be ordered from the supplier etc. All these together form another use case of the Order. How about the Order status (Pending, InProgress,ReadyToShip, Shipped,Delivered etc)? Does this belongs to an Order? It doesn't. The tracking of the Order's state isn't part of the Order concept. We're using additional data and behaviour to represent different use cases which are useful for the business and for the customer but which don't define the Order concept.
 
- There are a lot of Domain entities and Aggregate Roots which don't have behaviour but are involved in many use cases.  A domain object should model a Domain concept regardless of complexity or number of behaviours. The purpose is not to come up with big objects with lots of methods. The purpose of DDD is to recodesent the relevant business concepts, simple or complex.
+ There are a lot of Domain entities and Aggregate Roots which don't have behaviour but are involved in many use cases.  A domain object should model a Domain concept regardless of complexity or number of behaviours. The purpose is not to come up with big objects with lots of methods. The purpose of DDD is to represent the relevant business concepts, simple or complex.
 
  If you model the correct concept **as it is, not as you think it should be** based on technical rules or recipes, you'll have a very organic, flexible and thus maintainable Model.
 

@@ -61,7 +61,7 @@ cb.RegisterAssemblyTypes(this.Assembly).Where(t=>t.Name.Contains("Service")).AsS
 ```
   Now, everytime I add a new service or a new in memory repository, it gets automatically picked up by the container. Magic! Or not. The container scans for assemblies then asks them for the public types then filters them by a condition (implementing our convention) and registers the resulting types to be used as self and as concrete types for the implemented interfaces.
 
- A container also does object lifetime management so you don't have to worry about it. You can tell it to serve a new instance every time, an instance per scope (the http request is a tagged scope) or a singleton. Btw, this is the codeferred way to implement singletons. At least Autofac cares about disposable types, so when the scope ends, Dispose() is automatically invoked.
+ A container also does object lifetime management so you don't have to worry about it. You can tell it to serve a new instance every time, an instance per scope (the http request is a tagged scope) or a singleton. Btw, this is the preferred way to implement singletons. At least Autofac cares about disposable types, so when the scope ends, Dispose() is automatically invoked.
 
  I hope you're not afraid of DI Containers any more. They are simply factories which instantiate classes and do the boring work of getting every dependency right and they need configuration in order to work properly. You know that objects should be loosely coupled and when you have many of them with abstractions and different concrete types for the same abstraction, the DI Container is an invaluable tool that simplifies your work. And once you've used one properly, it will be very hard not to use it from then on.
 

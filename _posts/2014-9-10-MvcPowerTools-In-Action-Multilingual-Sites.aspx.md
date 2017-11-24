@@ -123,7 +123,7 @@ public class DefaultEngine : BaseViewConvention
   
 
 ```csharp
- public static HtmlTag LocalizedLinkTo(this HtmlHelper html,Excodession<Action<DefaultController>> action,string text=null)
+ public static HtmlTag LocalizedLinkTo(this HtmlHelper html,Expression<Action<DefaultController>> action,string text=null)
     {
         var name = action.GetMethodInfo().Name;
         var translations = html.GetTranslations();

@@ -14,7 +14,7 @@ I do like the fact that lots of devs want to write good code and that the school
 
  This comes with experience and not by learning design patterns by heart. And contrary to what you might believe, there isn't a design pattern for every problem you have. I see this worrying trend where the first thing a junior does when he has a problem is to go ask someone (on stack overflow): what pattern should I use here? **None!**
 
- Even if there were a well known pattern, at this point you don't understand them, you haven't spent the time to come up with a solution in order to apcodeciate the pattern, in order to understand WHY the pattern works that way. And judging by the number of people misusing the Repository pattern, chances are you will think that you've understood the pattern when in fact you're applying an anti-pattern.
+ Even if there were a well known pattern, at this point you don't understand them, you haven't spent the time to come up with a solution in order to appreciate the pattern, in order to understand WHY the pattern works that way. And judging by the number of people misusing the Repository pattern, chances are you will think that you've understood the pattern when in fact you're applying an anti-pattern.
 
  When coding, don't think about design patterns, think about solving problems. It doesn't matter that your solution isn't the perfect one, few are and from the first try, none is. Good solutions appear in time and until you haven't dealt with a bad solution, you won't understand the good one.
 

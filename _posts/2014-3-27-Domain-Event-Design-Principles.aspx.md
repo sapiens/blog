@@ -4,7 +4,7 @@ title: Domain Event Design Principles
 category: Domain Driven Design
 ---
 
-In theory it's codetty simple: a domain event notifies that something has happened in the domain i.e the domain has changed. But how do we design the event to capture the relevant information? That event can have many subscribers(handlers) and each handler should intercodet the event properly. There's no recipe here and no single truth, but I'll try here to codesent the principles I'm using when I'm thinking about a domain event.
+In theory it's pretty simple: a domain event notifies that something has happened in the domain i.e the domain has changed. But how do we design the event to capture the relevant information? That event can have many subscribers(handlers) and each handler should interpret the event properly. There's no recipe here and no single truth, but I'll try here to present the principles I'm using when I'm thinking about a domain event.
 
  Let's consider this scenario: Customer changes its address. The obvious event would look like this
 
@@ -32,7 +32,7 @@ public class CustomerProfileChanged
 ```
   I think the majority would choose the first option as it's more explicit. However, what if the customer can only change its profile as a whole? So basically, everytime he wants to update the address, the whole profile is loaded, address is changed, whole profile is submitted. You can detect the change and generate the corresponding event, but what if he changes 90% of its profile (unlikely but the important bit is that you have a form with many updated fields). Would you want to generate 10 events related to the same object? A single CustomerProfileChanged event might be more suitable.
 
- But even with one event, what do the fields recodesent? The current state, you say? But did all the fields change? A null address can be a valid value or the 'fields has not changed' value. Clearly, one event is not the best solution if only some fields can change. So, back to our 10 events generation?
+ But even with one event, what do the fields represent? The current state, you say? But did all the fields change? A null address can be a valid value or the 'fields has not changed' value. Clearly, one event is not the best solution if only some fields can change. So, back to our 10 events generation?
 
  I think we should correlate the event content with the command fields (or service parameters if you're not using commands) and with the context. In our example, things like Address or Email can change (very rarely but more often than FirstName) and it makes sense to have specific events for that. But also it may make sense to have something like CustomerBasicProfileUpdated for many changes at once. We don't know how the UI looks and we can't guess how the UI might change in the future so we need to decide how to design relevant events: specific enough to convey proper information but not that specific that you end up generated 3 of them for every change (i.e don't automatically create an event for each object property that can change).
 

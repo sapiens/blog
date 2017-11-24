@@ -4,7 +4,7 @@ title: Invoking A Private Method On A Subclass
 category: .Net
 ---
 
-I was just (re)watching Greg Young's [Event Sourcing Presentation](http://www.infoq.com/codesentations/Events-Are-Not-Just-for-Notifications) when the following code appeared on slides
+I was just (re)watching Greg Young's [Event Sourcing Presentation](http://www.infoq.com/presentations/Events-Are-Not-Just-for-Notifications) when the following code appeared on slides
 
   
 ```csharp

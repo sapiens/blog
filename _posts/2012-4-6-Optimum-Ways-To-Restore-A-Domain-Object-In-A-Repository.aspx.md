@@ -60,7 +60,7 @@ public interface IRepository
      This solution may work,  but:  
        
        * That constructor is available everywhere and you'd have to specify in comments that that constructor is to be used only for restoring the object. Pretty ugly. 
-       * If the object has many fields then the constructor needs to accept LOTS of arguments, which is not a codetty sight.   
+       * If the object has many fields then the constructor needs to accept LOTS of arguments, which is not a pretty sight.   
   4. **Making all the fields/properties setters public**.   
      This is probably the worst solution, as it breaks the encapsulation. **Don't do it! Ever!** 
   6. **Provide a factory method**.  
@@ -79,6 +79,6 @@ public static QueueItem Restore(Guid id,int blogId /* etc*/) {}
 
  You might have noticed that I didn't include the case when an ORM is used. That's because an ORM is an implementation detail of the repository and the **Domain Model is different from the Persistence Model** handled by the ORM (I don't consider relevant the cases where those happen to be identical because of a very simplistic domain or a misuse). And being different means you still have to transfer the values from the ORM entities to the domain object.
 
- But what if you can't use any of the good solutions above? No document db and no automapper (I find it hard to believe automapper can't be used almost anywhere but it may be the case). Then the next optimum solution is to use the factory method I've codesented before. It's not the best but it's a good compromise. Of course, if the object is very complex perhaps a dedicated factory is a better choice.
+ But what if you can't use any of the good solutions above? No document db and no automapper (I find it hard to believe automapper can't be used almost anywhere but it may be the case). Then the next optimum solution is to use the factory method I've presented before. It's not the best but it's a good compromise. Of course, if the object is very complex perhaps a dedicated factory is a better choice.
 
 

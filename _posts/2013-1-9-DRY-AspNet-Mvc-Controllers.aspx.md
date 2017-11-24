@@ -69,13 +69,13 @@ public class HomeController:Controller
 
  Although you've seen the SmartController, the actual feature is in fact implemented by the SmartActionAttribute. As you might have guessed the difference between them is that one works at the controller level (applies to all actions) while the other works at the action level (only the decorated action gets the feature).
 
- How does it work? The Smart functionality is an action filter running before and after the action. It checks the modelstate validity and if it fails it uses a codedefined policy, which by default is to return a view with the same name as the action. If before the action, the action won't be invoked at all. If the validation fails after the action, then the result returned by the action is ignored.
+ How does it work? The Smart functionality is an action filter running before and after the action. It checks the modelstate validity and if it fails it uses a predefined policy, which by default is to return a view with the same name as the action. If before the action, the action won't be invoked at all. If the validation fails after the action, then the result returned by the action is ignored.
 
  So you don't have to do the checks yourself. The action will be invoked ONLY if validation succeeds and the result will be executed ONLY if the second validation succeeds.
 
  What about the case where a model needs to be populated? In many scenarios, the view model needs more than the info received from the request. In this example, our Post model needs the categories set. How does the magic works?
 
- When codeparing the model for a failed validation, the SmartAction checks if there is a class which can populate the model. That is, it asks the DI Container if it has an ISetupModel<T>, in this case an ISetupModel<Post>, like this (a trivial example, an actualy setup usually involves more than 1 line)
+ When preparing the model for a failed validation, the SmartAction checks if there is a class which can populate the model. That is, it asks the DI Container if it has an ISetupModel<T>, in this case an ISetupModel<Post>, like this (a trivial example, an actualy setup usually involves more than 1 line)
 
   
 ```csharp
