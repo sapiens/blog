@@ -8,7 +8,7 @@ Let's take the community's favourite example: modelling an Order. In this scenar
 
  First of all, what is the purpose of an Order for our Domain? In most of the cases the Order captures what a customer (C) wants to buy from you (products/services), coupon codes that the C want used with that order, a shipping address where the products will be delivered. I keep this simple, I won't involve billing here.
 
- Let's talk a bit about order lines (everybody knows that an order has lines). Each line recodesents a quantity of a product at a specific price. Since prices change often we really need to keep the price valid at the time C placed the order. But what is a Price? Note that now I'm talking about the domain concept of 'price' . A Price is codetty much always a positive (or zero) value and a currency. 10 is not a price, it's a number. -5 USD can't really exist while a simple decimal is again a number.
+ Let's talk a bit about order lines (everybody knows that an order has lines). Each line represents a quantity of a product at a specific price. Since prices change often we really need to keep the price valid at the time C placed the order. But what is a Price? Note that now I'm talking about the domain concept of 'price' . A Price is pretty much always a positive (or zero) value and a currency. 10 is not a price, it's a number. -5 USD can't really exist while a simple decimal is again a number.
 
  Here it's important to ensure we've got the right definition. After all, you are seeing -5 USD (whatever currency) quite often on an invoice or receipt. But is it a Price? Or is it a _Discount_? Or maybe a loss? So let's define Price in code
 

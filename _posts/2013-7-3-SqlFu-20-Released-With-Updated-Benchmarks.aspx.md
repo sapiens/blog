@@ -74,7 +74,7 @@ Executing scenario: ExecuteScalar
 Dapper scalar - 500 iterations executed in 72,4849 ms
 InsightDatabase - 500 iterations executed in 77,5271 ms
 SqlFu scalar - 500 iterations executed in 82,1141 ms
-SqlFu get scalar excodession based - 500 iterations executed in 84,9293 ms
+SqlFu get scalar expression based - 500 iterations executed in 84,9293 ms
 OrmLite - 500 iterations executed in 87,2419 ms
 PetaPoco string - 500 iterations executed in 87,8697 ms
 Massive - 500 iterations executed in 124,431 ms

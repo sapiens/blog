@@ -4,7 +4,7 @@ title: SqlFu 1.3.1 Released, Updated Benchmarks
 category: SqlFu
 ---
 
-Version 1.3.1 of SqlFu brings  helpers to make some tasks easier. For writing moderately complex queries I codefer Sql (I think it's easier than messing with Linq) but for very simple queries or commands I wanted to remain in C# land. Doing inserts or updates is boring with sql and while there was an Update method in SqlFu which easied the pain, it wasn't enough because it couldn't handle trivial things like:
+Version 1.3.1 of SqlFu brings  helpers to make some tasks easier. For writing moderately complex queries I prefer Sql (I think it's easier than messing with Linq) but for very simple queries or commands I wanted to remain in C# land. Doing inserts or updates is boring with sql and while there was an Update method in SqlFu which easied the pain, it wasn't enough because it couldn't handle trivial things like:
 
   
 ```csharp
@@ -124,7 +124,7 @@ InsightDatabase - 500 iterations executed in 61,0439 ms
 SqlFu scalar int - 500 iterations executed in 61,789 ms
 PetaPoco int - 500 iterations executed in 63,7753 ms
 OrmLite - 500 iterations executed in 68,7653 ms
-SqlFu get scalar excodession based - 500 iterations executed in 71,3949 ms
+SqlFu get scalar expression based - 500 iterations executed in 71,3949 ms
 Massive - 500 iterations executed in 98,7458 ms
 
 Executing scenario: MultiPocoMapping
@@ -154,6 +154,6 @@ PetaPoco - 500 iterations executed in 84,1997 ms
 Dapper  - 500 iterations executed in 129,9522 ms
 massive - 500 iterations executed in 183,4292 ms
 ```
-  It seems that performance is not that much of a concern when using a micro Orm. A few of miliseconds difference when dealing with 500 queries is negligible. Pretty much any micro Orm is fast these days so what will make you codefer one over the other is their feature set (did you know SqlFu has integrated support for [database migrations](https://github.com/sapiens/SqlFu/wiki) ?) and how comfortable you feel using them. And even if all seem to have similar core features, they do have different (not so obvious) strengths.
+  It seems that performance is not that much of a concern when using a micro Orm. A few of miliseconds difference when dealing with 500 queries is negligible. Pretty much any micro Orm is fast these days so what will make you prefer one over the other is their feature set (did you know SqlFu has integrated support for [database migrations](https://github.com/sapiens/SqlFu/wiki) ?) and how comfortable you feel using them. And even if all seem to have similar core features, they do have different (not so obvious) strengths.
 
 

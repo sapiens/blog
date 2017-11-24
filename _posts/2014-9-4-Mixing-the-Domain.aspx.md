@@ -6,13 +6,13 @@ category: Domain Driven Design
 
 With DDD becoming more popular, it's like a "fight" between the old CRUD and the cool DDD. It's easy to assume that we have CRUD apps and DDD apps: this app is simple therefore it's CRUD, this app seems to have a rich domain, therefore we should be using DDD. But in practice, there are some apps which are 100% CRUD while no app is 100% DDD.
 
- Let's quickly define a CRUD app: it's a database UI concerned with taking the correct (valid) input from users to shove it into the db. It doesn't care about business semantics and contains NO business logic. It does contain some business rules recodesented by validation.
+ Let's quickly define a CRUD app: it's a database UI concerned with taking the correct (valid) input from users to shove it into the db. It doesn't care about business semantics and contains NO business logic. It does contain some business rules represented by validation.
 
  But once you have 1 object/function encapsulating business logic, it's no longer a 100% CRUD app. But does it matter? A lot of devs are treating ANY app as a CRUD one (especially web apps) because they don't know better. And it works until the business logic becomes more complex and/or changes often. Then you have a maintainability problem.
 
  Noawadays, anyone (loose term) knows that for a domain rich in behaviour, DDD is the way to go. But regardless of how complex the Domain is, there's no such thing as 100% domain containing only Rich Behaviour Objects (RBO), you have at least one domain concept which really is a data structure (CustomerProfile comes in mind). Actually there are more than one, I say that a domain id at least 25% data structures.
 
- Thing is, with DDD we're usually using CQRS, Domain Events or Event Sourcing. But if a good chunk (actually one class is enough) of our domain is just a data structure, in other words it's CRUDy, aren't we complicating our life with at least 2 models (CQRS) or creating events which codetty much are the entity itself?
+ Thing is, with DDD we're usually using CQRS, Domain Events or Event Sourcing. But if a good chunk (actually one class is enough) of our domain is just a data structure, in other words it's CRUDy, aren't we complicating our life with at least 2 models (CQRS) or creating events which pretty much are the entity itself?
 
  The problem appears when we decide on a solution up front then force any problem into that solution. RBO with a CRUD mindset is pain, data structures with event Sourcing or CQRS is just a complication. How about we use the optimum solution for each problem? How about we're doing CRUD with the data structures from our Domain and CQRS, Domain Events and Event Sourcing with the RBOs?
 

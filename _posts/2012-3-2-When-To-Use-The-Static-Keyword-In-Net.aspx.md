@@ -42,7 +42,7 @@ Another aspect is testing. By their nature, static classes and properties are ag
   
 What about factory methods? A static factory method makes sense. The best usage is when you need to return an abstraction, a good example is an abstract class with a factory method which returns an instance of a derived class. But you can also use a static factory method to control the instantiation of a type, either to create an instance from another type ( example: the Int32.Parse method) or to validate a constructor argument gracefully without throwing exceptions (example: the Int32.TryParse method).  
   
-As you can see, _**static**_ has codetty limited good usage and it's rather a trap if you're not experienced enough. So when you need a specific functionality, try first to see if it can fit an object, only afterwards decide if it helps more to be static. As a general principle avoid making static any code which needs disposing, which may take long to complete or which works with unmanaged resources.  
+As you can see, _**static**_ has pretty limited good usage and it's rather a trap if you're not experienced enough. So when you need a specific functionality, try first to see if it can fit an object, only afterwards decide if it helps more to be static. As a general principle avoid making static any code which needs disposing, which may take long to complete or which works with unmanaged resources.  
   
 In a nutshell, if  
 - functionality is utilitarian and it doesn't need state, or  

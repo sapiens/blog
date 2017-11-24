@@ -50,7 +50,7 @@ public class PowerToolsInit : IScriptParams
     public IDictionary<int, string> ScriptParams { get; private set; }
 }
 ```
-  You see that I'm defining a class using init data: **PowerToolsInit**. This is how I override the default implementation of **IScriptParams**, I'm providing my own. In this class I'm deciding which projects are to be built based on script arguments. **Solution**  and **Project** are codedefined helpers of Make# (intellisense really simplifies your work ). I have only one solution so I'll be using it as a singleton.
+  You see that I'm defining a class using init data: **PowerToolsInit**. This is how I override the default implementation of **IScriptParams**, I'm providing my own. In this class I'm deciding which projects are to be built based on script arguments. **Solution**  and **Project** are predefined helpers of Make# (intellisense really simplifies your work ). I have only one solution so I'll be using it as a singleton.
 
   
 ```csharp
@@ -76,7 +76,7 @@ public class build
     }
 }
 ```
-  Self explaining. **BuildScript** is another codedefined helper. _MsBuildClean_ and _MsBuildRelease_ are windows specific helpers (found in **MakeSharp.Windows.Helpers.dll** which comes with Make#) implemented as extension methods.  
+  Self explaining. **BuildScript** is another predefined helper. _MsBuildClean_ and _MsBuildRelease_ are windows specific helpers (found in **MakeSharp.Windows.Helpers.dll** which comes with Make#) implemented as extension methods.  
   
 
 
@@ -131,7 +131,7 @@ class ExplicitDependencyVersion_
     }
 }
 ```
-  Now this is interesting. The **Context** property allows Make# to inject a codedefined **TaskContext** that can be used to access script arguments (or in this case the init object) and pass values to be used by other tasks. **BuildScript.GetNuspecFile** is a helper returning a **NuSpecFile** object (codedefined helper) which assumes there is a nuspec file with the project name available in the same directory as the build script. The **GetAssemblySemanticVersion** method of Project allows you to specify versioning details like code-release or build meta as defined by [Semver](http://semver.org). For Nuget purposes any text suffix marks the package as code-release.
+  Now this is interesting. The **Context** property allows Make# to inject a predefined **TaskContext** that can be used to access script arguments (or in this case the init object) and pass values to be used by other tasks. **BuildScript.GetNuspecFile** is a helper returning a **NuSpecFile** object (predefined helper) which assumes there is a nuspec file with the project name available in the same directory as the build script. The **GetAssemblySemanticVersion** method of Project allows you to specify versioning details like pre-release or build meta as defined by [Semver](http://semver.org). For Nuget purposes any text suffix marks the package as pre-release.
 
  In order to update the dependencies version, I've created an utility class for that (default task discovery convention for Make# says that a class with the "_" suffix is not a task, i.e just a POCO) and my convention to indicate in a nuspec that a package dependency's version needs to be updated is that the version contains "replace", like this
 
@@ -139,7 +139,7 @@ class ExplicitDependencyVersion_
 ```csharp
 <dependency id="CavemanTools" version="0.0.0-replace" />
 ```
-  Then I tell the **NuSpecFile** object to save the updated nuspec in the project's temp folder then I invoke the codedefined _CreateNuget_ helper. Then I save the returned nupgk file path into **Context.Data** so that it can be used by the next task.
+  Then I tell the **NuSpecFile** object to save the updated nuspec in the project's temp folder then I invoke the predefined _CreateNuget_ helper. Then I save the returned nupgk file path into **Context.Data** so that it can be used by the next task.
 
   
 ```csharp

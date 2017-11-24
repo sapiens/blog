@@ -20,7 +20,7 @@ category: Repository
 
  So how can you test or demo the app? Well, you have to implement the repositories but you'll be using an in-memory collection (a list, array, dictionary etc). Why that, instead of the real repository? Because:  
     a. It's the fastest implementation that can be written.  
-    b. You'll be doing it using TDD, so it's codetty much a codetext do write the repository tests, because I hope you like having tests for the repositories too, right?
+    b. You'll be doing it using TDD, so it's pretty much a pretext do write the repository tests, because I hope you like having tests for the repositories too, right?
 
  Of course, those tests will be waiting for you when you'll write the 'real' (any) implementation. Here's an example:
 

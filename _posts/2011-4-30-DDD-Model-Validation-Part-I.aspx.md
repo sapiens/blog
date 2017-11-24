@@ -80,7 +80,7 @@ public bool IsPublished {get;set;}
 ```
   
 
- I'm keeping it at a minimum so that it's easier to follow. The model looks codetty ordinary, but you can see that you annotated the entity instead of the viewmodel (as you would have done normally). The CreatePostData (the view model)  is simply a DTO which will be used to create the PostEntity. The entity knows how to validate itself with the same DataAnnotations (i'm using my [CavemanTools](http://cavemantools.codeplex.com/) validator helper for that).
+ I'm keeping it at a minimum so that it's easier to follow. The model looks pretty ordinary, but you can see that you annotated the entity instead of the viewmodel (as you would have done normally). The CreatePostData (the view model)  is simply a DTO which will be used to create the PostEntity. The entity knows how to validate itself with the same DataAnnotations (i'm using my [CavemanTools](http://cavemantools.codeplex.com/) validator helper for that).
 
  However you can see something unusual: the constructor is private and we have a static factory method to create the entity. Why is that? The purpose is to ensure that the enitity is always in a valid state and we also want to return error messages to the user. The factory method validates the data according to validation attributes and then it returns a new PostEntity if everything is ok or null if there are errors.
 

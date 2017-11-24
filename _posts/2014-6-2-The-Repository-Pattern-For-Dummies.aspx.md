@@ -4,7 +4,7 @@ title: The Repository Pattern Explained (For Dummies)
 category: Repository
 ---
 
-You read a lot of tutorials about the Repository pattern which seem to contradict themselves. You asked the question on StackOverflow and you also got conflicting answers. What can you do? Can anyone explain this pattern in a _simple_ manner without throwing all kinds of code and codetentious buzzwords at you? Yes, I can!
+You read a lot of tutorials about the Repository pattern which seem to contradict themselves. You asked the question on StackOverflow and you also got conflicting answers. What can you do? Can anyone explain this pattern in a _simple_ manner without throwing all kinds of code and pretentious buzzwords at you? Yes, I can!
 
  Hello, I'm the Business Layer. I hold everything related to the application's Domain. I'm using a lot of business objects and I do create a lot of new objects, too. I know that all these objects need to be persisted or retrieved from some storage. So, I have these shelves where I put all the new objects on. And everytime I need to work with an object I just get it from the shelf, do the work then put it back. I don't know how these shelves work and how they're actually storing or retrieving **my** objects. I do know that I just put the _business objects_ there and I get them back _exactly_ how they were. It's like magic or something...
 

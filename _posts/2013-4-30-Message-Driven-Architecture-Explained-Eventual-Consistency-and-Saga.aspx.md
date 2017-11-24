@@ -22,7 +22,7 @@ You can find [part one here](http://www.sapiensworks.com/blog/post/2013/04/19/Me
  
 ## Saga
 
- A Saga is used to manage a long running process. Got it? No? Well, there are some long running operations which are considered to be complete when all their steps are completed. Nothing unusual except the fact that each step can be completed independently of other so there isn't a codedefined order. Another aspect is that steps are completed in unknown time periods, so one can take 2ms while others minutes, hours or days. The saga keeps track of these steps as they happen and ends when all involved steps are completed.
+ A Saga is used to manage a long running process. Got it? No? Well, there are some long running operations which are considered to be complete when all their steps are completed. Nothing unusual except the fact that each step can be completed independently of other so there isn't a predefined order. Another aspect is that steps are completed in unknown time periods, so one can take 2ms while others minutes, hours or days. The saga keeps track of these steps as they happen and ends when all involved steps are completed.
 
  Let's consider this real-life example: John goes to a fast food restaurant and orders a menu. This means one hamburger, one portion of fries and one soda. John tries to pays with the credit card... if he finds it. For whatever reason, it's not in the usual place. In the mean time, the employee get the soda and tells John he has to wait a bit for the hamburgers and the fries. John finally finds the credit card and pays. After a few minutes everything is ready and he can enjoy his meal.
 
@@ -38,13 +38,13 @@ You can find [part one here](http://www.sapiensworks.com/blog/post/2013/04/19/Me
 - Hamburger ready  
 - Fries ready
 
- Usually things probably happen in a slightly different order depending on how you pay and if the menu items are already codepared.
+ Usually things probably happen in a slightly different order depending on how you pay and if the menu items are already prepared.
 
  Now, let's 'write' the above example as a saga.
 
  John orders a menu, that is the OrderSubmitted event is published which starts the operation (saga). Starting the saga means issuing the commands: PrepareHamburger, PrepareFries, PrepareSoda, ReceivePayment. It just happens that E will handle all the commands: first E checks for each menu item to see if they are available. Hamburgers and Fries are not so two other commands MakeHamburger and MakeFries are sent. The Soda is available, so the SodaReady event can be published which signals the saga that one step has been completed.
 
- In the mean time John pays so the PaymentReceived event is published and saga marks another step as completed. After a few minutes the HamburgerReady and FriesReady events arrive and the saga marks the last items' completition. All the steps are completed so saga ends, codeferably with the SentOrderToClient command.
+ In the mean time John pays so the PaymentReceived event is published and saga marks another step as completed. After a few minutes the HamburgerReady and FriesReady events arrive and the saga marks the last items' completition. All the steps are completed so saga ends, preferably with the SentOrderToClient command.
 
  Here we have 2 actors: the employee (which is the messages handler) and the saga. A saga is started by an event and it's updated by other events. All these need to be correlated so there is usually a message property which acts as the correlation id (for example OrderId). All that saga does is to coordinate events and commands. In the above example, saga began by sending a few commands then handled the events which updated its progress and when it completed, it sent a final command.
 

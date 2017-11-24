@@ -25,7 +25,7 @@ category: Domain Driven Design
  
 ### **Starting with technical details**
 
- Begin modeling from a technical point of view (what are my aggregate roots, is Customer an entity, should I use an ORM, I have this Aggregate Root so I must have a Repository also etc) instead of the Domain's  i.e too much technical mumbo jumbo and too little 'philosophy'. Bounded contexts, aggregates, entities etc appear naturally when you understand the Domain. The point is: let the Domain guide the code and not viceversa. You don't try to fit the Domain into the programming language or a framework. You are just excodessing the Domain using code.
+ Begin modeling from a technical point of view (what are my aggregate roots, is Customer an entity, should I use an ORM, I have this Aggregate Root so I must have a Repository also etc) instead of the Domain's  i.e too much technical mumbo jumbo and too little 'philosophy'. Bounded contexts, aggregates, entities etc appear naturally when you understand the Domain. The point is: let the Domain guide the code and not viceversa. You don't try to fit the Domain into the programming language or a framework. You are just expressing the Domain using code.
 
  I've seen a lot of debates if a method should belong to an Entity or to a Service. Is it a Domain Service, is it some other Service etc. These are just technical words which just complicate things. Just follow the Domain (the business) and see what it makes more sense from a business point of view, what it naturally fits. I repeat myself: there is no recipe and the technical aspect is secondary to the business aspect.
 

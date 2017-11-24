@@ -12,7 +12,7 @@ One of my readers asked me
 >  
  Great question! It's a common scenario and one that usually makes you wonder "Remind me, why am I using DDD"? But let's start with something more concrete.
 
- Assume we have a list of messages, the user can select a number of them and codess the 'Archive' button. The messages will be marked as 'Archived' and hidden from the normal view. First let's see the CRUD approach:
+ Assume we have a list of messages, the user can select a number of them and press the 'Archive' button. The messages will be marked as 'Archived' and hidden from the normal view. First let's see the CRUD approach:
 
   
 ```csharp

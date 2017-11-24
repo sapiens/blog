@@ -18,7 +18,7 @@ Mike Sutton recently wrote about the [distinction between developer and programm
 
  However, from the Client/Product Owner's point of view, the developer is an abstraction of the whole team and this tells us that for the rest of the world, anyone involved in creating a software product is viewed as a developer, although functionally there are 3 backend programmers, 1 frontend programmer, 2 designers and 3 testers lead by a manager.
 
- About Mike's redefining the team concept, I don't see things that way. I believe that anyone in a team, developer or not, should learn and know more than strictly their codecise function. Flexibility and communication are important skills no matter what you do and I don't see a developer being an 'evolved' programmer who now knows how to do some QA work. I'm expecting every team member to be aware of what they're building and to understand each other roles in the process.
+ About Mike's redefining the team concept, I don't see things that way. I believe that anyone in a team, developer or not, should learn and know more than strictly their precise function. Flexibility and communication are important skills no matter what you do and I don't see a developer being an 'evolved' programmer who now knows how to do some QA work. I'm expecting every team member to be aware of what they're building and to understand each other roles in the process.
 
  I do think that while many people will agree there is a difference between developer and programmer/coder, each will have their own slightly different definitions. So I'm aware you might not totally agree with what I've wrote above.
 

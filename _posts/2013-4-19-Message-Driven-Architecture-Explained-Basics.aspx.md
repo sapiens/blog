@@ -13,7 +13,7 @@ You might know about Message Driven Architecture (MDA) if you've heard about the
  
 ## How It Works
 
- Let's say you have 3 modules: Sales, Accounting, Inventory. These 3 obviously need to work together but we want these modules not to be coupled one to another. Each module knows that the other exist, but they don't know where and how to talk with them. They are codetty decoupled.
+ Let's say you have 3 modules: Sales, Accounting, Inventory. These 3 obviously need to work together but we want these modules not to be coupled one to another. Each module knows that the other exist, but they don't know where and how to talk with them. They are pretty decoupled.
 
  In order to work together, these modules will pass messages to each other via a 3rd party, a 'transporter' which knows where everyone is. That transporter is called a **ServiceBus** and that's its sole responsibility: to deliver messages to a destination.
 
@@ -33,7 +33,7 @@ You might know about Message Driven Architecture (MDA) if you've heard about the
 
   
   * **Command** - the message tells that its handler must do something. The message name is the Command while its content are the command arguments. Good names are imperative ones: CreateOrder, RegisterPayment etc. A command is **sent** via the ServiceBus and can have _only one_ handler. 
-  * **Event** - the message tells that something have happened. A good event name recodesents an action in the past: OrderCreated, PaymentSubmitted etc. An event is **published** via the ServiceBus and can have _0 or more_ **subscribers**.  A message handler is the object which processes the message. There are** Command Handlers** (or Executors) and **Event Subscribers**. A message handler can send messages as well.
+  * **Event** - the message tells that something have happened. A good event name represents an action in the past: OrderCreated, PaymentSubmitted etc. An event is **published** via the ServiceBus and can have _0 or more_ **subscribers**.  A message handler is the object which processes the message. There are** Command Handlers** (or Executors) and **Event Subscribers**. A message handler can send messages as well.
 
  
 ## Idempotency

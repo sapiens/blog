@@ -13,8 +13,8 @@ My brief [adventure with FubuMvc](http://www.sapiensworks.com/blog/post/2013/01/
  What I need is a way to define some rules that can be applied automatically. For example I wanted to:
 
   
-  * generate the routes from the actions and use the naming convention to format the url. So having the controller "Pages" action "GetBy_Id_Page" would generate the url "pages/{id}/{page}". All POST actions would be simply called "Post" or should start with that codefix. 
-  * every url must be codefixed with the "{tenant}" parameter and the route should contain the default value for it. 
+  * generate the routes from the actions and use the naming convention to format the url. So having the controller "Pages" action "GetBy_Id_Page" would generate the url "pages/{id}/{page}". All POST actions would be simply called "Post" or should start with that prefix. 
+  * every url must be prefixed with the "{tenant}" parameter and the route should contain the default value for it. 
   * every Admin action should contain 'Admin' in the url or even better, the urls should be namespace based i.e the url hierarchy should respect the namespace hierarchy.  Taking a hint from Fubu, I came up with a simple way to define routing policies. I considered 3 cases:  
 - Generate 1 or more routes from an action  
 - Format url according to a criteria  
@@ -38,13 +38,13 @@ public class NamespacePrefixedUrls:IRouteUrlFormatPolicy
 
         public string Format(string url, ActionCall actionInfo)
         {
-            var codefix = actionInfo.Settings.StripNamespaceRoot(actionInfo.Controller.Namespace);
-            codefix = codefix.Replace('.', '/').TrimStart('/');
-            if (codefix.IsNullOrEmpty())
+            var prefix = actionInfo.Settings.StripNamespaceRoot(actionInfo.Controller.Namespace);
+            prefix = prefix.Replace('.', '/').TrimStart('/');
+            if (prefix.IsNullOrEmpty())
             {
                 return url;
             }
-            return codefix.ToLowerInvariant() + "/" + url;
+            return prefix.ToLowerInvariant() + "/" + url;
         }
     }
 ```
